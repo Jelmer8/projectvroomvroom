@@ -1,4 +1,5 @@
-﻿using System;
+﻿using projectVroomVroom.Circuit;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,24 @@ namespace projectVroomVroom
         public MainWindow()
         {
             InitializeComponent();
+            InitializeCars();
+            InitializeTrack();
+
+        }
+
+        private void InitializeTrack()
+        {
+            var pathData = circuit.TrackPath.Data;
+            var pathGeometry = pathData.GetFlattenedPathGeometry();
+            var pathFigure = pathGeometry.Figures[0];
+
+            polyLineSegment = (PolyLineSegment)pathFigure.Segments[0];
+            var p1 = polyLineSegment.Points[0];
+            trackStartPoint = pathFigure.StartPoint;
+
+
+
+
         }
     }
 }
