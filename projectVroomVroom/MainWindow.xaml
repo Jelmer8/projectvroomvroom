@@ -5,8 +5,51 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:projectVroomVroom"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="900" Width="1600">
     <Grid>
+
+        <Canvas Background="ForestGreen" Name="myCanvas" >
+            <Path  Stroke="Yellow" StrokeThickness="8" Canvas.Top="191.453" Canvas.Left="408.679" HorizontalAlignment="Center" VerticalAlignment="Top">
+                <Path.Data>
+                    <PathGeometry>
+                        <PathGeometry.Figures>
+                            <PathFigure StartPoint="550,430">
+                                <PolyLineSegment Points="776,354"/>
+                                <PolyLineSegment Points="736,303"/>
+                                <PolyLineSegment Points="762,237"/>
+                                <PolyLineSegment Points="755,181"/>
+                                <PolyLineSegment Points="677,112"/>
+                                <PolyLineSegment Points="221,12"/>
+                                <PolyLineSegment Points="189,107"/>
+                                <PolyLineSegment Points="197,138"/>
+                                <PolyLineSegment Points="220,174"/>
+                                <PolyLineSegment Points="436,326"/>
+                                <PolyLineSegment Points="446,375"/>
+                                <PolyLineSegment Points="417,428"/>
+                                <PolyLineSegment Points="316,452"/>
+                                <PolyLineSegment Points="292,428"/>
+                                <PolyLineSegment Points="318,376"/>
+                                <PolyLineSegment Points="283,345"/>
+                                <PolyLineSegment Points="214,404"/>
+                                <PolyLineSegment Points="138,409"/>
+                                <PolyLineSegment Points="135,382"/>
+                                <PolyLineSegment Points="189,336"/>
+                                <PolyLineSegment Points="201,297"/>
+                                <PolyLineSegment Points="178,245"/>
+                                <PolyLineSegment Points="41,170"/>
+                                <PolyLineSegment Points="3,263"/>
+                                <PolyLineSegment Points="36,379"/>
+                                <PolyLineSegment Points="91,444"/>
+                                <PolyLineSegment Points="332,497"/>
+                                <PolyLineSegment Points="550,430"/>
+                            </PathFigure>
+                        </PathGeometry.Figures>
+                    </PathGeometry>
+                </Path.Data>
+            </Path>
+
+
+        </Canvas>
 
     </Grid>
 </Window>
