@@ -24,12 +24,12 @@ namespace projectVroomVroom
         public MainWindow()
         {
             InitializeComponent();
-            InitializeCars();
-            InitializeTrack();
+            //InitializeCars();
+            //InitializeTrack();
 
         }
 
-        private void InitializeTrack()
+        /*private void InitializeTrack()
         {
             var pathData = circuit.TrackPath.Data;
             var pathGeometry = pathData.GetFlattenedPathGeometry();
@@ -39,9 +39,9 @@ namespace projectVroomVroom
             var p1 = polyLineSegment.Points[0];
             trackStartPoint = pathFigure.StartPoint;
 
+            
 
 
-
-        }
+        }*/
     }
 }

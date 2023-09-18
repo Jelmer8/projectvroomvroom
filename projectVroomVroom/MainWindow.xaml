@@ -6,7 +6,9 @@
         xmlns:local="clr-namespace:projectVroomVroom"
         mc:Ignorable="d"
         Title="MainWindow" Height="900" Width="1600">
-    <Grid>
+    <Grid Background="#FF00AF00">
+        <Button Content="Start" HorizontalAlignment="Center" Margin="0,648,0,0" VerticalAlignment="Top" Height="100" Width="250" FontSize="32"/>
+        <Label Content="Project Vroom Vroom" HorizontalAlignment="Center" Margin="0,150,0,0" VerticalAlignment="Top" Height="138" Width="725" FontSize="72"/>
 
     </Grid>
 </Window>
