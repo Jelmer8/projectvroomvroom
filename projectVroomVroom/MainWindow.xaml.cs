@@ -29,6 +29,11 @@ namespace projectVroomVroom
 
         }
 
+        private void StartButtonClick(object sender, RoutedEventArgs e)
+        {
+            //InitializeTrack();
+        }
+
         /*private void InitializeTrack()
         {
             var pathData = circuit.TrackPath.Data;

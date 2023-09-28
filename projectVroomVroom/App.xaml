@@ -3,7 +3,17 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:projectVroomVroom"
              StartupUri="MainWindow.xaml">
+
     <Application.Resources>
-         
+        <ResourceDictionary
+            xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+            xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+            <FontFamily x:Key="Pacifico">pack://application:,,,/projectVroomVroom;component/Fonts/#Pacifico</FontFamily>
+            <FontFamily x:Key="Raleway">pack://application:,,,/projectVroomVroom;component/Fonts/#Raleway</FontFamily>
+
+        </ResourceDictionary>
     </Application.Resources>
 </Application>
+
+    
