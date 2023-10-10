@@ -5,11 +5,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:projectVroomVroom"
         mc:Ignorable="d"
-        Title="MainWindow" Height="900" Width="1600">
-    <Grid Background="#FF00AF00">
-        <Button Content="Start" HorizontalAlignment="Center" Margin="0,650,0,0" VerticalAlignment="Top" Height="100" Width="250" FontSize="32" Click="StartButtonClick"/>
-        <Label Content="Sammy Racing" HorizontalContentAlignment="Center" HorizontalAlignment="Center" Margin="0,150,0,0" VerticalAlignment="Top" Height="205" Width="1021" FontSize="72" FontFamily="{StaticResource Pacifico}"/>
-        <Button Content="Settings" HorizontalAlignment="Center" Margin="0,500,0,0" VerticalAlignment="Top" Height="100" Width="250" FontSize="32" RenderTransformOrigin="-0.994,-2.35"/>
+        Title="MainWindow" Width="1920" Height="1080">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/images/background.png" Stretch="UniformToFill"/>
+        </Grid.Background>
+        <Image HorizontalAlignment="Center" Source="/Images/background_title.png" Height="290" Margin="0,126,0,0" VerticalAlignment="Top" Width="1000"/>
+        <Label Content="Vroom Vroom" Foreground="#FFFFFF" HorizontalContentAlignment="Center" HorizontalAlignment="Center" Margin="0,140,0,0" VerticalAlignment="Top" Height="205" Width="1021" FontSize="72" FontFamily="{StaticResource Pacifico}" />
+        <Button Content="START DE GAME" Background="#B1B1B1" HorizontalAlignment="Center" VerticalAlignment="Bottom" Height="65" Width="453" FontSize="44" FontFamily="{StaticResource Raleway}" Click="StartButtonClick" BorderThickness="2,2,2,2" Margin="0,0,0,165"/>
+        <Button Content="SCOREBORD" Background="#B1B1B1" HorizontalAlignment="Center" Margin="0,0,0,100" VerticalAlignment="Bottom" Height="55" Width="392" FontSize="44" FontFamily="{StaticResource Raleway}" RenderTransformOrigin="-0.994,-2.35" BorderThickness="2,2,2,2"/>
+        <Button Content="OPTIES" Background="#B1B1B1" HorizontalAlignment="Center" Margin="0,0,0,40" VerticalAlignment="Bottom" Height="50" Width="332" FontSize="44" FontFamily="{StaticResource Raleway}" RenderTransformOrigin="-0.994,-2.35" BorderThickness="2,2,2,2"/>
+        <Button Content="I" Background="#B1B1B1" HorizontalAlignment="Left" Margin="20,0,0,20" VerticalAlignment="Bottom" Height="50" Width="50" FontSize="32" FontFamily="{StaticResource Raleway}" RenderTransformOrigin="-0.994,-2.35" BorderThickness="2,2,2,2"/>
 
     </Grid>
 </Window>
