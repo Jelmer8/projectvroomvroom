@@ -10,16 +10,17 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace projectVroomVroom.Circuit
+namespace projectVroomVroom.Pages
 {
     /// <summary>
-    /// Interaction logic for Circuit.xaml
+    /// Interaction logic for CarSelection.xaml
     /// </summary>
-    public partial class Circuit : UserControl
+    public partial class CarSelection : UserControl
     {
-        public Circuit()
+        public CarSelection()
         {
             InitializeComponent();
         }

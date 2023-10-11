@@ -1,11 +1,11 @@
-﻿<Window x:Class="projectVroomVroom.Circuit.Circuit"
+﻿<UserControl x:Class="projectVroomVroom.Circuit.Circuit"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:projectVroomVroom.Circuit"
         mc:Ignorable="d"
-        Title="MainWindow" Height="900" Width="1600">
+        d:DesignHeight="1080" d:DesignWidth="1920">
     <Grid>
 
 
@@ -51,4 +51,4 @@
 
 
     </Grid>
-</Window>
+</UserControl>

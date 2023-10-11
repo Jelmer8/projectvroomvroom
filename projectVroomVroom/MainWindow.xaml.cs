@@ -1,18 +1,4 @@
-﻿using projectVroomVroom.Circuit;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+﻿using System.Windows;
 
 namespace projectVroomVroom
 {
@@ -24,29 +10,26 @@ namespace projectVroomVroom
         public MainWindow()
         {
             InitializeComponent();
-            //InitializeCars();
-            //InitializeTrack();
-
         }
 
         private void StartButtonClick(object sender, RoutedEventArgs e)
         {
-            //InitializeTrack();
+            this.Content = new Pages.CarSelection(); //Navigate to the CarSelection page
         }
 
-        /*private void InitializeTrack()
+        private void LeaderboardButtonClick(object sender, RoutedEventArgs e)
         {
-            var pathData = circuit.TrackPath.Data;
-            var pathGeometry = pathData.GetFlattenedPathGeometry();
-            var pathFigure = pathGeometry.Figures[0];
+            this.Content = new Pages.Leaderboard(); //Navigate to the Leaderboard page
+        }
 
-            polyLineSegment = (PolyLineSegment)pathFigure.Segments[0];
-            var p1 = polyLineSegment.Points[0];
-            trackStartPoint = pathFigure.StartPoint;
+        private void SettingsButtonClick(object sender, RoutedEventArgs e)
+        {
+            this.Content = new Pages.Settings(); //Navigate to the Settings page
+        }
 
-            
-
-
-        }*/
+        private void InfoButtonClick(object sender, RoutedEventArgs e)
+        {
+            this.Content = new Pages.Info(); //Navigate to the Info page
+        }
     }
 }
