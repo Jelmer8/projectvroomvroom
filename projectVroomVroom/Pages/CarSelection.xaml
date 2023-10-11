@@ -5,8 +5,83 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:projectVroomVroom.Pages"
              mc:Ignorable="d" 
-             d:DesignHeight="1080" d:DesignWidth="1920">
-    <Grid>
-            
-    </Grid>
+             d:DesignHeight="1080" d:DesignWidth="1920" Background="#646464">
+
+    <UserControl.Resources>
+        <Style x:Key="ArrowButtonStyle" TargetType="Button">
+            <Setter Property="Background">
+                <Setter.Value>
+                    <ImageBrush ImageSource="/images/arrowbutton.png"/>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Grid Background="{TemplateBinding Background}">
+                            <ContentPresenter />
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+    </UserControl.Resources>
+
+    <Viewbox StretchDirection="Both" Stretch="Fill" >
+        <Grid Width="1920" Height="1080">
+            <TextBox MinWidth="257" MaxWidth="500" Width="Auto" Height="74" Margin="25,25,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" GotFocus="RemovePlaceholder" LostFocus="AddPlaceholder" Background="#FFFFB34F" BorderBrush="Black" Text="Naam" FontSize="56" FontFamily="Raleway" FontWeight="Bold"/>
+
+            <Rectangle HorizontalAlignment="Center" Height="259" Margin="0,127,0,0" Fill="#7B7B7B" Stroke="#FFB34F" VerticalAlignment="Top" Width="480" StrokeThickness="3"/>
+            <Button Width="143" Height="89" Margin="-700,210,0,0" HorizontalAlignment="Center" VerticalAlignment="Top" Style="{StaticResource ArrowButtonStyle}" RenderTransformOrigin="0.5,0.5" BorderBrush="{x:Null}" >
+                <Button.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="180"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Button.RenderTransform>
+                <Button.Background>
+                    <ImageBrush ImageSource="/images/arrowbutton.png"/>
+                </Button.Background>
+            </Button>
+            <Button Width="143" Height="89" Margin="700,210,0,0" HorizontalAlignment="Center" VerticalAlignment="Top" Style="{StaticResource ArrowButtonStyle}" BorderBrush="{x:Null}" >
+                <Button.Background>
+                    <ImageBrush ImageSource="/Images/arrowbutton.png"/>
+                </Button.Background>
+            </Button>
+            <Button Name="ReadyButton1" Width="249" Height="75" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,-130,25,0" Background="#B1B1B1" BorderBrush="Black" Content="KLAAR" FontSize="48" FontFamily="Raleway" FontWeight="Bold" BorderThickness="2,2,2,2" Click="ReadyButton1Click"/>
+
+
+
+            <Rectangle HorizontalAlignment="Stretch" Height="5" Margin="0,0,0,0" Fill="Black" Stroke="Black" VerticalAlignment="Center"/>
+
+
+
+            <TextBox MinWidth="257" MaxWidth="500" Width="Auto" Height="74" Margin="25,125,0,0" HorizontalAlignment="Left" VerticalAlignment="Center" GotFocus="RemovePlaceholder" LostFocus="AddPlaceholder" Background="#FFFFB34F" BorderBrush="Black" Text="Naam" FontSize="56" FontFamily="Raleway" FontWeight="Bold"/>
+            <Rectangle HorizontalAlignment="Center" Height="259" Margin="0,0,0,127" Fill="#7B7B7B" Stroke="#FFB34F" VerticalAlignment="Bottom" Width="480" StrokeThickness="3"/>
+            <Button Width="143" Height="89" Margin="-700,0,0,210" HorizontalAlignment="Center" VerticalAlignment="Bottom" Style="{StaticResource ArrowButtonStyle}" RenderTransformOrigin="0.5,0.5" BorderBrush="{x:Null}" >
+                <Button.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="180"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Button.RenderTransform>
+                <Button.Background>
+                    <ImageBrush ImageSource="/images/arrowbutton.png"/>
+                </Button.Background>
+            </Button>
+            <Button Width="143" Height="89" Margin="700,0,0,210" HorizontalAlignment="Center" VerticalAlignment="Bottom" Style="{StaticResource ArrowButtonStyle}" BorderBrush="{x:Null}" >
+                <Button.Background>
+                    <ImageBrush ImageSource="/Images/arrowbutton.png"/>
+                </Button.Background>
+            </Button>
+
+
+            <Button Name="ReadyButton2" Width="249" Height="75" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,25,25" Background="#B1B1B1" BorderBrush="Black" Content="KLAAR" FontSize="48" FontFamily="Raleway" FontWeight="Bold" BorderThickness="2,2,2,2" Click="ReadyButton2Click"/>
+
+        </Grid>
+    </Viewbox>
 </UserControl>

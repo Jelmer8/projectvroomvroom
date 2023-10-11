@@ -10,6 +10,7 @@
   <ItemGroup>
     <None Remove="Fonts\Pacifico-Regular.ttf" />
     <None Remove="Fonts\Raleway-Bold.ttf" />
+    <None Remove="Images\arrowbutton.png" />
     <None Remove="Images\background.png" />
     <None Remove="Images\background_title.png" />
   </ItemGroup>
@@ -17,6 +18,7 @@
   <ItemGroup>
     <Resource Include="Fonts\Pacifico-Regular.ttf" />
     <Resource Include="Fonts\Raleway-Bold.ttf" />
+    <Resource Include="Images\arrowbutton.png" />
     <Resource Include="Images\background.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
