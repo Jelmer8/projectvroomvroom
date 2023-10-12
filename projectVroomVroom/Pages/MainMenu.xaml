@@ -6,16 +6,18 @@
         xmlns:local="clr-namespace:projectVroomVroom"
         mc:Ignorable="d"
         d:DesignHeight="1080" d:DesignWidth="1920" Background="#646464">
-    <Grid>
-        <Grid.Background>
-            <ImageBrush ImageSource="/images/background.png" Stretch="UniformToFill"/>
-        </Grid.Background>
-        <Image HorizontalAlignment="Center" Source="/Images/background_title.png" Height="290" Margin="0,126,0,0" VerticalAlignment="Top" Width="1000"/>
-        <Label Content="Vroom Vroom" Foreground="#FFFFFF" HorizontalContentAlignment="Center" HorizontalAlignment="Center" Margin="0,140,0,0" VerticalAlignment="Top" Height="205" Width="1021" FontSize="72" FontFamily="{StaticResource Pacifico}" />
-        <Button Content="START DE GAME" Background="#B1B1B1" HorizontalAlignment="Center" VerticalAlignment="Bottom" Height="65" Width="453" FontSize="44" FontFamily="{StaticResource Raleway}" Click="StartButtonClick" BorderThickness="2,2,2,2" Margin="0,0,0,165"/>
-        <Button Content="SCOREBORD" Background="#B1B1B1" HorizontalAlignment="Center" Margin="0,0,0,100" VerticalAlignment="Bottom" Height="55" Width="392" FontSize="44" FontFamily="{StaticResource Raleway}" RenderTransformOrigin="-0.994,-2.35" BorderThickness="2,2,2,2" Click="LeaderboardButtonClick"/>
-        <Button Content="OPTIES" Background="#B1B1B1" HorizontalAlignment="Center" Margin="0,0,0,40" VerticalAlignment="Bottom" Height="50" Width="332" FontSize="44" FontFamily="{StaticResource Raleway}" RenderTransformOrigin="-0.994,-2.35" BorderThickness="2,2,2,2" Click="SettingsButtonClick"/>
-        <Button Content="I" Background="#B1B1B1" HorizontalAlignment="Left" Margin="20,0,0,20" VerticalAlignment="Bottom" Height="50" Width="50" FontSize="32" FontFamily="{StaticResource Raleway}" RenderTransformOrigin="-0.994,-2.35" BorderThickness="2,2,2,2" Click="InfoButtonClick"/>
+    <Viewbox StretchDirection="Both" Stretch="Fill">
+        <Grid Width="1920" Height="1080">
+            <Grid.Background>
+                <ImageBrush ImageSource="/images/background.png" Stretch="UniformToFill"/>
+            </Grid.Background>
+            <Image HorizontalAlignment="Center" Source="/Images/background_title.png" Height="290" Margin="0,126,0,0" VerticalAlignment="Top" Width="1000"/>
+            <Label Content="Vroom Vroom" Foreground="#FFFFFF" HorizontalContentAlignment="Center" HorizontalAlignment="Center" Margin="0,140,0,0" VerticalAlignment="Top" Height="205" Width="1021" FontSize="72" FontFamily="{StaticResource Pacifico}" />
+            <Button Content="START DE GAME" Background="#B1B1B1" HorizontalAlignment="Center" VerticalAlignment="Bottom" Height="65" Width="453" FontSize="44" FontFamily="{StaticResource Raleway}" Click="StartButtonClick" BorderThickness="2,2,2,2" Margin="0,0,0,165"/>
+            <Button Content="SCOREBORD" Background="#B1B1B1" HorizontalAlignment="Center" Margin="0,0,0,100" VerticalAlignment="Bottom" Height="55" Width="392" FontSize="44" FontFamily="{StaticResource Raleway}" RenderTransformOrigin="-0.994,-2.35" BorderThickness="2,2,2,2" Click="LeaderboardButtonClick"/>
+            <Button Content="OPTIES" Background="#B1B1B1" HorizontalAlignment="Center" Margin="0,0,0,40" VerticalAlignment="Bottom" Height="50" Width="332" FontSize="44" FontFamily="{StaticResource Raleway}" RenderTransformOrigin="-0.994,-2.35" BorderThickness="2,2,2,2" Click="SettingsButtonClick"/>
+            <Button Content="I" Background="#B1B1B1" HorizontalAlignment="Left" Margin="20,0,0,20" VerticalAlignment="Bottom" Height="50" Width="50" FontSize="32" FontFamily="{StaticResource Raleway}" RenderTransformOrigin="-0.994,-2.35" BorderThickness="2,2,2,2" Click="InfoButtonClick"/>
 
-    </Grid>
+        </Grid>
+    </Viewbox>
 </UserControl>
