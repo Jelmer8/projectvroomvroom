@@ -13,6 +13,8 @@
     <None Remove="Images\arrowbutton.png" />
     <None Remove="Images\background.png" />
     <None Remove="Images\background_title.png" />
+    <None Remove="Images\car1.png" />
+    <None Remove="Images\car2.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -23,6 +25,8 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Images\background_title.png" />
+    <Resource Include="Images\car1.png" />
+    <Resource Include="Images\car2.png" />
   </ItemGroup>
 
 </Project>
