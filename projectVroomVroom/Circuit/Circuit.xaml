@@ -6,7 +6,10 @@
         xmlns:local="clr-namespace:projectVroomVroom.Circuit"
         mc:Ignorable="d"
         d:DesignHeight="900" d:DesignWidth="1600">
-    <Grid>
+    <Grid x:Name="grdMain" Margin="0,0,-221,-255">
+        <Grid.RenderTransform>
+            <ScaleTransform ScaleX="0.5" ScaleY="0.5"/>
+        </Grid.RenderTransform>
 
 
         <!-- <Path  Stroke="Yellow" StrokeThickness="8" Canvas.Top="132.52" Canvas.Left="306.5" HorizontalAlignment="Left" VerticalAlignment="Center" Height="619" Stretch="Fill" Width="987" Margin="330,0,0,0">
@@ -48,7 +51,8 @@
           <  </Path.Data>
        < </Path>    -->
 
-        <Path  Stroke="Yellow" StrokeThickness="8" Canvas.Top="132.52" Canvas.Left="306.5" HorizontalAlignment="Center" VerticalAlignment="Center" Height="619" Stretch="Fill" Width="987">
+        <Path  x:Name="trackPath" Stroke="Yellow" StrokeThickness="8">
+            <!-- (Als het niet werkt moet dit terug in de path na de strokethickness) <Canvas.Top="132.52" Canvas.Left="306.5" HorizontalAlignment="Center" VerticalAlignment="Center" Height="619" Stretch="Fill" Width="987" -->
             <Path.Data>
                 <PathGeometry>
                     <PathGeometry.Figures>
@@ -91,8 +95,5 @@
                 </PathGeometry>
             </Path.Data>
         </Path>
-
-
-
     </Grid>
 </UserControl>
