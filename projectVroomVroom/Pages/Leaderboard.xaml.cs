@@ -20,9 +20,22 @@ namespace projectVroomVroom.Pages
     /// </summary>
     public partial class Leaderboard : UserControl
     {
+
+        private MainWindow mainWindow = (MainWindow)Application.Current.MainWindow; // Get the main window
+
         public Leaderboard()
         {
             InitializeComponent();
+        }
+
+        private void BackButtonClick(object sender, RoutedEventArgs e)
+        {
+            mainWindow.Content = new Pages.MainMenu(); // Navigate back to the main menu
+        }
+
+        private void DataGrid_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
         }
     }
 }
