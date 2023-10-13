@@ -22,7 +22,7 @@ namespace projectVroomVroom.Pages
     {
         public Leaderboard()
         {
-            InitializeComponent(); //ea
+            InitializeComponent();
         }
     }
 }
