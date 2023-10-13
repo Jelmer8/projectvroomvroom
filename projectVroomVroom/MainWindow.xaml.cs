@@ -1,4 +1,5 @@
 ﻿using projectVroomVroom.Circuit;
+using projectVroomVroom.TrackSegments;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -40,7 +41,7 @@ namespace projectVroomVroom
         double frictionOnHeavyGrass = 0.85;
         int[,] trackArray = new int[5, 5];
         double lastTrackAngle = 0;
-       /// ITrackSegment lastSegment = null;
+        ITrackSegment lastSegment = null;
         DateTime startTime;
         DateTime currentTime;
         ICircuit circuit = new Circuit.Circuit();
@@ -51,7 +52,7 @@ namespace projectVroomVroom
         Path trackCenterLine;
         Path mapWhiteLine;
         Path mapBlackLine;
-       /// List<TrackLineSegment> trackLineList = new List<TrackLineSegment>();
+        List<TrackLineSegment> trackLineList = new List<TrackLineSegment>();
         PolyLineSegment polyLineSegment;
         const double MAX_TRACK_FRICTION_RANGE = 110.0;
         const double MAX_LIGHTGRASS_FRICTION_RANGE = 120.0;
@@ -165,7 +166,13 @@ namespace projectVroomVroom
                 if (point.Y > max_track_point_Y)
                     max_track_point_Y = point.Y;
 
+                var trackLineSegment = new TrackLineSegment(index, circuitLength, new Point(lastPoint.X * 8, lastPoint.Y * 8), new Point(point.X * 8, point.Y * 8));
+                trackLineList.Add(trackLineSegment);
 
+                index++;
+
+                trackLineSegment.Milestone = circuitLength;
+                circuitLength += trackLineSegment.Length;
 
                 index++;
 
