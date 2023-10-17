@@ -15,7 +15,10 @@
     <None Remove="Images\background_title.png" />
     <None Remove="Images\car1.png" />
     <None Remove="Images\car2.png" />
-	<Resource Include="Images\Minimalist_info_Icon.png" />
+	<None Remove="Images\Minimalist_info_Icon.png" />
+	<None Remove="Images\arrows_keybind.png" />
+	<None Remove="Images\wasd_keybinds.png" />
+	<None Remove="Images\keyboard_keybinds.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -29,6 +32,9 @@
     <Resource Include="Images\car1.png" />
     <Resource Include="Images\car2.png" />
 	<Resource Include="Images\Minimalist_info_Icon.png" />
+	<Resource Include="Images\arrows_keybind.png" />
+	<Resource Include="Images\wasd_keybinds.png" />
+	<Resource Include="Images\keyboard_keybinds.png" />
   </ItemGroup>
 
 </Project>
