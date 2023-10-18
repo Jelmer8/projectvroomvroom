@@ -32,6 +32,7 @@ namespace projectVroomVroom.Pages
         {
             InitializeComponent();
             ImportLeaderboard();
+            UpdateMap();
         }
 
         private void LeaderboardMapUpArrowButtonClick(object sender, RoutedEventArgs e)
@@ -64,6 +65,14 @@ namespace projectVroomVroom.Pages
         {
 
             Map.Source = new BitmapImage(new Uri("pack://application:,,,/Images/map" + MapNumber + ".png")); // Update the car image
+            if (MapNumber == 1)
+            {  
+                MapName.Text = "Interlagos"; 
+            }
+            else if (MapNumber == 2)
+            {
+                MapName.Text = "Zandvoort";
+            }
             ImportLeaderboard();
         }
 
@@ -95,6 +104,8 @@ namespace projectVroomVroom.Pages
                 r8Name.Text = Score[7];
                 r9Name.Text = Score[8];
                 r10Name.Text = Score[9];
+
+
             }
             catch (Exception e)
             {
