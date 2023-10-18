@@ -17,11 +17,24 @@ namespace projectVroomVroom.Circuit
     /// <summary>
     /// Interaction logic for Circuit.xaml
     /// </summary>
+<<<<<<< HEAD
     public partial class Circuit : UserControl
+=======
+    public partial class Circuit : UserControl, ICircuit
+>>>>>>> Youri
     {
         public Circuit()
         {
             InitializeComponent();
+        }
+        public Path TrackPath
+        {
+            get { return trackPath; }
+        }
+
+        public Size GetSize()
+        {
+            return new Size(grdMain.Width, grdMain.Height);
         }
     }
 }
