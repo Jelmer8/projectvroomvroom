@@ -5,91 +5,50 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:projectVroomVroom.Circuit"
         mc:Ignorable="d"
-<<<<<<< HEAD
         d:DesignHeight="1080" d:DesignWidth="1920">
     <Grid>
-=======
-        d:DesignHeight="1200" d:DesignWidth="1630">
-    <Grid x:Name="grdMain" >
-        <Grid.RenderTransform>
-            <ScaleTransform ScaleX="1" ScaleY="1"/>
-        </Grid.RenderTransform>
->>>>>>> Youri
 
 
-        <!-- <Path  Stroke="Yellow" StrokeThickness="8" Canvas.Top="132.52" Canvas.Left="306.5" HorizontalAlignment="Left" VerticalAlignment="Center" Height="619" Stretch="Fill" Width="987" Margin="330,0,0,0">
+        <Path  Stroke="Yellow" StrokeThickness="8" Canvas.Top="132.52" Canvas.Left="306.5" HorizontalAlignment="Left" VerticalAlignment="Center" Height="619" Stretch="Fill" Width="987" Margin="330,0,0,0">
             <Path.Data>
                 <PathGeometry>
                     <PathGeometry.Figures>
                         <PathFigure StartPoint="550,430">
                             <PolyLineSegment Points="776,354"/>
                             <PolyLineSegment Points="736,303"/>
-                <            <PolyLineSegment Points="762,237"/>
-                 <           <PolyLineSegment Points="755,181"/>
-                  <          <PolyLineSegment Points="677,112"/>
-                   <         <PolyLineSegment Points="221,12"/>
-                    <       <PolyLineSegment Points="189,107"/>
-                     <       <PolyLineSegment Points="197,138"/>
-                     <       <PolyLineSegment Points="220,174"/>
-                      <      <PolyLineSegment Points="436,326"/>
-                      <      <PolyLineSegment Points="446,375"/>
-                      <      <PolyLineSegment Points="417,428"/>
-                      <      <PolyLineSegment Points="316,452"/>
-                      <      <PolyLineSegment Points="292,428"/>
-                      <      <PolyLineSegment Points="318,376"/>
-                      <      <PolyLineSegment Points="283,345"/>
-                      <      <PolyLineSegment Points="214,404"/>
-                      <      <PolyLineSegment Points="138,409"/>
-                      <      <PolyLineSegment Points="135,382"/>
-                      <      <PolyLineSegment Points="189,336"/>
-                      <      <PolyLineSegment Points="201,297"/>
-                      <      <PolyLineSegment Points="178,245"/>
-                      <      <PolyLineSegment Points="41,170"/>
-                      <      <PolyLineSegment Points="3,263"/>
-                      <      <PolyLineSegment Points="36,379"/>
-                      <      <PolyLineSegment Points="91,444"/>
-                      <      <PolyLineSegment Points="332,497"/>
-                     <       <PolyLineSegment Points="550,430"/>
-                    <    </PathFigure>
-                 <   </PathGeometry.Figures>
-              <  </PathGeometry>
-          <  </Path.Data>
-       < </Path>    -->
-        <Path x:Name="borderPath" Stroke="Red" StrokeThickness="45" 
-          Data="{Binding Data, ElementName=trackPath}" />
-        <Path x:Name="trackPath" Stroke="Gray" StrokeThickness="35">
-            <Path.Data>
-                <PathGeometry>
-                    <PathGeometry.Figures>
-                        <PathFigure StartPoint="480,95">
-                            <PolyLineSegment Points="54,932"/>
-                            <QuadraticBezierSegment Point1="69,1020" Point2="220,1116"/>
-                            <PolyLineSegment Points="440,1093"/>
-                            <QuadraticBezierSegment Point1="460,1038" Point2="395,715"/>
-                            <QuadraticBezierSegment Point1="430,688" Point2="476,690"/>
-                            <QuadraticBezierSegment Point1="524,733" Point2="920,622"/>
-                            <PolyLineSegment Points="1120,604"/>
-                            <QuadraticBezierSegment Point1="1347,624" Point2="1376,668"/>
-                            <PolyLineSegment Points="1338,725"/>
-                            <QuadraticBezierSegment Point1="1133,769" Point2="1060,825"/>
-                            <PolyLineSegment Points="1131,894"/>
-                            <QuadraticBezierSegment Point1="1375,922" Point2="1484,758"/>
-                            <PolyLineSegment Points="1580,634"/>
-                            <PolyLineSegment Points="1568,543"/>
-                            <QuadraticBezierSegment Point1="1440,486" Point2="1200,481"/>
-                            <PolyLineSegment Points="932,574"/>
-                            <QuadraticBezierSegment Point1="612,546" Point2="354,593"/>
-                            <QuadraticBezierSegment Point1="316,554" Point2="352,508"/>
-                            <PolyLineSegment Points="490,449"/>
-                            <QuadraticBezierSegment Point1="506,303" Point2="591,121"/>
-                            <QuadraticBezierSegment Point1="548,78" Point2="490,95"/>
-                            <QuadraticBezierSegment Point1="490,95" Point2="480,95"/>
-                            <PolyLineSegment Points="480,98"/>
-                            
+                            <PolyLineSegment Points="762,237"/>
+                            <PolyLineSegment Points="755,181"/>
+                            <PolyLineSegment Points="677,112"/>
+                            <PolyLineSegment Points="221,12"/>
+                            <PolyLineSegment Points="189,107"/>
+                            <PolyLineSegment Points="197,138"/>
+                            <PolyLineSegment Points="220,174"/>
+                            <PolyLineSegment Points="436,326"/>
+                            <PolyLineSegment Points="446,375"/>
+                            <PolyLineSegment Points="417,428"/>
+                            <PolyLineSegment Points="316,452"/>
+                            <PolyLineSegment Points="292,428"/>
+                            <PolyLineSegment Points="318,376"/>
+                            <PolyLineSegment Points="283,345"/>
+                            <PolyLineSegment Points="214,404"/>
+                            <PolyLineSegment Points="138,409"/>
+                            <PolyLineSegment Points="135,382"/>
+                            <PolyLineSegment Points="189,336"/>
+                            <PolyLineSegment Points="201,297"/>
+                            <PolyLineSegment Points="178,245"/>
+                            <PolyLineSegment Points="41,170"/>
+                            <PolyLineSegment Points="3,263"/>
+                            <PolyLineSegment Points="36,379"/>
+                            <PolyLineSegment Points="91,444"/>
+                            <PolyLineSegment Points="332,497"/>
+                            <PolyLineSegment Points="550,430"/>
                         </PathFigure>
                     </PathGeometry.Figures>
                 </PathGeometry>
             </Path.Data>
         </Path>
+
+
+
     </Grid>
 </UserControl>
