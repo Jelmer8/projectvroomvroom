@@ -5,9 +5,11 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:projectVroomVroom.Pages"
              mc:Ignorable="d" 
-             d:DesignHeight="1080" d:DesignWidth="1920">
+             d:DesignHeight="1080" d:DesignWidth="1920" Background="#646464">
     <Viewbox StretchDirection="Both" Stretch="Fill">
         <Grid Width="1920" Height="1080">
+
+            <Button Width="249" Height="75" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="25,0,0,25" Background="#B1B1B1" BorderBrush="Black" Content="TERUG" FontSize="48" FontFamily="Raleway" FontWeight="Bold" BorderThickness="2,2,2,2" Click="BackButtonClick"/>
 
         </Grid>
     </Viewbox>
