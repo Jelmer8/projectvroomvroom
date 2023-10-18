@@ -14,10 +14,10 @@ public partial class MainWindow : Window
 
     private void InitializeTrack()
     {
-        Circuit circuit = new Circuit();  // Instantiate your Circuit UserControl
-        Size circuitSize = circuit.GetSize();  // Get the size of the Circuit UserControl
+        Circuit circuit = new Circuit();  
+        Size circuitSize = circuit.GetSize();  
 
-        // You can add your circuit to the main window's content or another container as needed
+       
         Content = circuit;
         Width = circuitSize.Width;
         Height = circuitSize.Height;
