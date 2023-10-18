@@ -20,9 +20,18 @@ namespace projectVroomVroom.Pages
     /// </summary>
     public partial class Settings : UserControl
     {
+
+        private MainWindow mainWindow = (MainWindow)Application.Current.MainWindow; // Get the main window
+
         public Settings()
         {
             InitializeComponent();
         }
+
+        private void BackButtonClick(object sender, RoutedEventArgs e)
+        {
+            mainWindow.Content = new Pages.MainMenu(); // Navigate back to the main menu
+        }
+
     }
 }

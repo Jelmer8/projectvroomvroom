@@ -5,9 +5,117 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:projectVroomVroom.Pages"
              mc:Ignorable="d" 
-             d:DesignHeight="1080" d:DesignWidth="1920">
+             d:DesignHeight="1080" d:DesignWidth="1920" Background="#646464">
+
+    <UserControl.Resources>
+        <Style x:Key="ArrowButtonStyle" TargetType="Button">
+            <Setter Property="Background">
+                <Setter.Value>
+                    <ImageBrush ImageSource="/images/arrowbutton.png"/>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Grid Background="{TemplateBinding Background}">
+                            <ContentPresenter />
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </UserControl.Resources>
+
     <Viewbox StretchDirection="Both" Stretch="Fill">
         <Grid Width="1920" Height="1080">
+
+            <Image Name="Map" Width="383" Height="145" Margin="365,314,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Source="/Images/map1.png" Stretch="Fill" RenderTransformOrigin="-0.65,1.291" />
+            <Border HorizontalAlignment="Left" Height="59" Margin="365,460,0,0" Background="#FFFFB34F" BorderBrush="Black" BorderThickness="1" VerticalAlignment="Top" Width="383" RenderTransformOrigin="0.698,0.672"/>
+            <TextBlock HorizontalAlignment="Left" Margin="462,466,0,0" TextWrapping="Wrap" Text=" " Name="MapName" VerticalAlignment="Top" FontSize="40" FontFamily="Raleway" FontWeight="Bold"/>
+            <Button Width="249" Height="75" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="25,0,0,25" Background="#B1B1B1" BorderBrush="Black" Content="TERUG" FontSize="48" FontFamily="Raleway" FontWeight="Bold" BorderThickness="2,2,2,2" Click="BackButtonClick"/>
+
+
+            <Button Width="143" Height="89" Margin="485,563,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Style="{StaticResource ArrowButtonStyle}" RenderTransformOrigin="0.5,0.5" BorderBrush="{x:Null}" Click="LeaderboardMapDownArrowButtonClick" >
+                <Button.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="89.685"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Button.RenderTransform>
+                <Button.Background>
+                    <ImageBrush ImageSource="/images/arrowbutton.png"/>
+                </Button.Background>
+            </Button>
+            <Button Width="143" Height="89" Margin="488,187,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Style="{StaticResource ArrowButtonStyle}" BorderBrush="{x:Null}" Click="LeaderboardMapUpArrowButtonClick" RenderTransformOrigin="0.5,0.5" >
+                <Button.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="-90.081"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Button.RenderTransform>
+                <Button.Background>
+                    <ImageBrush ImageSource="/Images/arrowbutton.png"/>
+                </Button.Background>
+            </Button>
+            <Rectangle HorizontalAlignment="Left" Height="1010" Margin="1261,0,0,0" Stroke="Black" Fill="#B1B1B1" VerticalAlignment="Center" Width="491"/>
+            <Rectangle HorizontalAlignment="Left" Height="110" Margin="1261,35,0,0" Stroke="Black" VerticalAlignment="Top" Width="491"/>
+            <TextBlock HorizontalAlignment="Left" Margin="1267,66,0,0" TextWrapping="Wrap" Text="Rang" VerticalAlignment="Top" FontSize="40" FontFamily="Raleway" FontWeight="Bold"/>
+            <TextBlock HorizontalAlignment="Left" Margin="1451,66,0,0" TextWrapping="Wrap" Text="Naam" VerticalAlignment="Top" FontSize="40" FontFamily="Raleway" FontWeight="Bold"/>
+            <TextBlock HorizontalAlignment="Left" Margin="1675,66,0,0" TextWrapping="Wrap" Text="Tijd" VerticalAlignment="Top" FontSize="40" FontFamily="Raleway" FontWeight="Bold"/>
+
+            <Rectangle HorizontalAlignment="Left" Height="90" Margin="1261,955,0,0" Stroke="Black" VerticalAlignment="Top" Width="491"/>
+            <TextBlock HorizontalAlignment="Left" Margin="1267,166,0,0" TextWrapping="Wrap" Text="1." VerticalAlignment="Top" FontSize="40" FontFamily="Raleway" FontWeight="Bold"/>
+            <TextBlock HorizontalAlignment="Left" Margin="1451,172,0,0" TextWrapping="Wrap" Text=" " Name ="r1Name" VerticalAlignment="Top" FontSize="30" FontFamily="Raleway" FontWeight="Bold"/>
+            <TextBlock HorizontalAlignment="Left" Margin="1675,172,0,0" TextWrapping="Wrap" Text=" " Name ="r1Time" VerticalAlignment="Top" FontSize="30" FontFamily="Raleway" FontWeight="Bold"/>
+
+            <Rectangle HorizontalAlignment="Left" Height="90" Margin="1261,865,0,0" Stroke="Black" VerticalAlignment="Top" Width="491"/>
+            <TextBlock HorizontalAlignment="Left" Margin="1267,256,0,0" TextWrapping="Wrap" Text="2." VerticalAlignment="Top" FontSize="40" FontFamily="Raleway" FontWeight="Bold"/>
+            <TextBlock HorizontalAlignment="Left" Margin="1451,262,0,0" TextWrapping="Wrap" Text=" " Name ="r2Name" VerticalAlignment="Top" FontSize="30" FontFamily="Raleway" FontWeight="Bold"/>
+            <TextBlock HorizontalAlignment="Left" Margin="1675,262,0,0" TextWrapping="Wrap" Text=" " Name ="r2Time" VerticalAlignment="Top" FontSize="30" FontFamily="Raleway" FontWeight="Bold"/>
+
+            <Rectangle HorizontalAlignment="Left" Height="90" Margin="1261,775,0,0" Stroke="Black" VerticalAlignment="Top" Width="491"/>
+            <TextBlock HorizontalAlignment="Left" Margin="1267,346,0,0" TextWrapping="Wrap" Text="3." VerticalAlignment="Top" FontSize="40" FontFamily="Raleway" FontWeight="Bold"/>
+            <TextBlock HorizontalAlignment="Left" Margin="1451,352,0,0" TextWrapping="Wrap" Text=" " Name ="r3Name" VerticalAlignment="Top" FontSize="30" FontFamily="Raleway" FontWeight="Bold"/>
+            <TextBlock HorizontalAlignment="Left" Margin="1675,352,0,0" TextWrapping="Wrap" Text=" " Name ="r3Time" VerticalAlignment="Top" FontSize="30" FontFamily="Raleway" FontWeight="Bold"/>
+
+            <Rectangle HorizontalAlignment="Left" Height="90" Margin="1261,685,0,0" Stroke="Black" VerticalAlignment="Top" Width="491"/>
+            <TextBlock HorizontalAlignment="Left" Margin="1267,436,0,0" TextWrapping="Wrap" Text="4." VerticalAlignment="Top" FontSize="40" FontFamily="Raleway" FontWeight="Bold"/>
+            <TextBlock HorizontalAlignment="Left" Margin="1451,442,0,0" TextWrapping="Wrap" Text=" " Name ="r4Name" VerticalAlignment="Top" FontSize="30" FontFamily="Raleway" FontWeight="Bold"/>
+            <TextBlock HorizontalAlignment="Left" Margin="1675,442,0,0" TextWrapping="Wrap" Text=" " Name ="r4Time" VerticalAlignment="Top" FontSize="30" FontFamily="Raleway" FontWeight="Bold" RenderTransformOrigin="8.643,4.781"/>
+
+            <Rectangle HorizontalAlignment="Left" Height="90" Margin="1261,595,0,0" Stroke="Black" VerticalAlignment="Top" Width="491"/>
+            <TextBlock HorizontalAlignment="Left" Margin="1267,526,0,0" TextWrapping="Wrap" Text="5." VerticalAlignment="Top" FontSize="40" FontFamily="Raleway" FontWeight="Bold"/>
+            <TextBlock HorizontalAlignment="Left" Margin="1451,532,0,0" TextWrapping="Wrap" Text=" " Name ="r5Name" VerticalAlignment="Top" FontSize="30" FontFamily="Raleway" FontWeight="Bold"/>
+            <TextBlock HorizontalAlignment="Left" Margin="1675,532,0,0" TextWrapping="Wrap" Text=" " Name ="r5Time" VerticalAlignment="Top" FontSize="30" FontFamily="Raleway" FontWeight="Bold"/>
+
+            <Rectangle HorizontalAlignment="Left" Height="90" Margin="1261,505,0,0" Stroke="Black" VerticalAlignment="Top" Width="491"/>
+            <TextBlock HorizontalAlignment="Left" Margin="1267,616,0,0" TextWrapping="Wrap" Text="6." VerticalAlignment="Top" FontSize="40" FontFamily="Raleway" FontWeight="Bold"/>
+            <TextBlock HorizontalAlignment="Left" Margin="1451,622,0,0" TextWrapping="Wrap" Text=" " Name ="r6Name" VerticalAlignment="Top" FontSize="30" FontFamily="Raleway" FontWeight="Bold"/>
+            <TextBlock HorizontalAlignment="Left" Margin="1675,622,0,0" TextWrapping="Wrap" Text=" " Name ="r6Time" VerticalAlignment="Top" FontSize="30" FontFamily="Raleway" FontWeight="Bold"/>
+
+            <Rectangle HorizontalAlignment="Left" Height="90" Margin="1261,415,0,0" Stroke="Black" VerticalAlignment="Top" Width="491"/>
+            <TextBlock HorizontalAlignment="Left" Margin="1267,706,0,0" TextWrapping="Wrap" Text="7." VerticalAlignment="Top" FontSize="40" FontFamily="Raleway" FontWeight="Bold"/>
+            <TextBlock HorizontalAlignment="Left" Margin="1451,712,0,0" TextWrapping="Wrap" Text=" " Name ="r7Name" VerticalAlignment="Top" FontSize="30" FontFamily="Raleway" FontWeight="Bold"/>
+            <TextBlock HorizontalAlignment="Left" Margin="1675,712,0,0" TextWrapping="Wrap" Text=" " Name ="r7Time" VerticalAlignment="Top" FontSize="30" FontFamily="Raleway" FontWeight="Bold"/>
+
+            <Rectangle HorizontalAlignment="Left" Height="90" Margin="1261,325,0,0" Stroke="Black" VerticalAlignment="Top" Width="491"/>
+            <TextBlock HorizontalAlignment="Left" Margin="1267,796,0,0" TextWrapping="Wrap" Text="8." VerticalAlignment="Top" FontSize="40" FontFamily="Raleway" FontWeight="Bold"/>
+            <TextBlock HorizontalAlignment="Left" Margin="1451,802,0,0" TextWrapping="Wrap" Text=" " Name ="r8Name" VerticalAlignment="Top" FontSize="30" FontFamily="Raleway" FontWeight="Bold"/>
+            <TextBlock HorizontalAlignment="Left" Margin="1675,802,0,0" TextWrapping="Wrap" Text=" " Name ="r8Time" VerticalAlignment="Top" FontSize="30" FontFamily="Raleway" FontWeight="Bold"/>
+
+            <Rectangle HorizontalAlignment="Left" Height="90" Margin="1261,235,0,0" Stroke="Black" VerticalAlignment="Top" Width="491"/>
+            <TextBlock HorizontalAlignment="Left" Margin="1267,886,0,0" TextWrapping="Wrap" Text="9." VerticalAlignment="Top" FontSize="40" FontFamily="Raleway" FontWeight="Bold"/>
+            <TextBlock HorizontalAlignment="Left" Margin="1451,892,0,0" TextWrapping="Wrap" Text=" " Name ="r9Name" VerticalAlignment="Top" FontSize="30" FontFamily="Raleway" FontWeight="Bold"/>
+            <TextBlock HorizontalAlignment="Left" Margin="1675,895,0,0" TextWrapping="Wrap" Text=" " Name ="r9Time" VerticalAlignment="Top" FontSize="30" FontFamily="Raleway" FontWeight="Bold"/>
+
+            <Rectangle HorizontalAlignment="Left" Height="90" Margin="1261,145,0,0" Stroke="Black" VerticalAlignment="Top" Width="491"/>
+            <TextBlock HorizontalAlignment="Left" Margin="1267,976,0,0" TextWrapping="Wrap" Text="10." VerticalAlignment="Top" FontSize="40" FontFamily="Raleway" FontWeight="Bold"/>
+            <TextBlock HorizontalAlignment="Left" Margin="1451,982,0,0" TextWrapping="Wrap" Text=" " Name ="r10Name" VerticalAlignment="Top" FontSize="30" FontFamily="Raleway" FontWeight="Bold"/>
+            <TextBlock HorizontalAlignment="Left" Margin="1675,982,0,0" TextWrapping="Wrap" Text=" " Name ="r10Time" VerticalAlignment="Top" FontSize="30" FontFamily="Raleway" FontWeight="Bold"/>
 
         </Grid>
     </Viewbox>

@@ -5,9 +5,37 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:projectVroomVroom.Pages"
              mc:Ignorable="d" 
-             d:DesignHeight="1080" d:DesignWidth="1920">
+             d:DesignHeight="1080" d:DesignWidth="1920" Background="#646464">
     <Viewbox StretchDirection="Both" Stretch="Fill">
         <Grid Width="1920" Height="1080">
+
+
+            <Button Width="248" Height="75" HorizontalAlignment="Center" VerticalAlignment="Top" Background="#B1B1B1" BorderBrush="Black" Content="TERUG" FontSize="48" FontFamily="Raleway" FontWeight="Bold" BorderThickness="2,2,2,2" Click="BackButtonClick" Margin="0,967,0,0"/>
+            <Image Margin="136,47,136,592" Source="/Images/keyboard_keybinds.png" Stretch="Fill"/>
+            <Image Margin="136,723,1406,113" Source="/Images/wasd_keybinds.png" Stretch="Fill"/>
+            <Image Margin="1408,723,136,113" Source="/Images/arrows_keybind.png" Stretch="Fill"/>
+            <Border HorizontalAlignment="Left" Height="72" Margin="136,540,0,0" Background="#FFFFB34F" BorderBrush="Black" BorderThickness="1" VerticalAlignment="Top" Width="378"/>
+            <TextBlock HorizontalAlignment="Left" Margin="211,546,0,0" TextWrapping="Wrap" Text="Speler 1" VerticalAlignment="Top" FontSize="50" FontFamily="Raleway" FontWeight="Bold"/>
+            <TextBlock HorizontalAlignment="Left" Margin="264,643,0,0" TextWrapping="Wrap" Text="Vooruit" VerticalAlignment="Top" FontSize="35" FontFamily="Raleway" FontWeight="Bold"/>
+            <TextBlock HorizontalAlignment="Left" Margin="136,1004,0,0" TextWrapping="Wrap" Text="Links" VerticalAlignment="Top" FontSize="35" FontFamily="Raleway" FontWeight="Bold"/>
+            <TextBlock HorizontalAlignment="Left" Margin="396,1004,0,0" TextWrapping="Wrap" Text="Rechts" VerticalAlignment="Top" FontSize="35" FontFamily="Raleway" FontWeight="Bold"/>
+            <TextBlock HorizontalAlignment="Left" Margin="237,1028,0,0" TextWrapping="Wrap" Text="Achteruit" VerticalAlignment="Top" FontSize="35" FontFamily="Raleway" FontWeight="Bold"/>
+            <Border HorizontalAlignment="Left" Height="40" Margin="446,972,0,0" Background="#FFFFB34F" BorderBrush="Black" BorderThickness="1" VerticalAlignment="Top" Width="7"/>
+            <Border HorizontalAlignment="Left" Height="40" Margin="318,983,0,0" Background="#FFFFB34F" BorderBrush="Black" BorderThickness="1" VerticalAlignment="Top" Width="7"/>
+            <Border HorizontalAlignment="Left" Height="40" Margin="171,972,0,0" Background="#FFFFB34F" BorderBrush="Black" BorderThickness="1" VerticalAlignment="Top" Width="7"/>
+            <Border HorizontalAlignment="Left" Height="40" Margin="322,678,0,0" Background="#FFFFB34F" BorderBrush="Black" BorderThickness="1" VerticalAlignment="Top" Width="7" RenderTransformOrigin="0.698,0.672"/>
+
+            <Border HorizontalAlignment="Left" Height="72" Margin="1408,540,0,0" Background="#FFFFB34F" BorderBrush="Black" BorderThickness="1" VerticalAlignment="Top" Width="378"/>
+            <TextBlock HorizontalAlignment="Left" Margin="1501,546,0,0" TextWrapping="Wrap" Text="Speler 2" VerticalAlignment="Top" FontSize="50" FontFamily="Raleway" FontWeight="Bold"/>
+            <TextBlock HorizontalAlignment="Left" Margin="211,546,0,0" TextWrapping="Wrap" Text="Speler 1" VerticalAlignment="Top" FontSize="50" FontFamily="Raleway" FontWeight="Bold"/>
+            <TextBlock HorizontalAlignment="Left" Margin="1536,643,0,0" TextWrapping="Wrap" Text="Vooruit" VerticalAlignment="Top" FontSize="35" FontFamily="Raleway" FontWeight="Bold"/>
+            <TextBlock HorizontalAlignment="Left" Margin="1408,1004,0,0" TextWrapping="Wrap" Text="Links" VerticalAlignment="Top" FontSize="35" FontFamily="Raleway" FontWeight="Bold"/>
+            <TextBlock HorizontalAlignment="Left" Margin="1676,1004,0,0" TextWrapping="Wrap" Text="Rechts" VerticalAlignment="Top" FontSize="35" FontFamily="Raleway" FontWeight="Bold"/>
+            <TextBlock HorizontalAlignment="Left" Margin="1517,1028,0,0" TextWrapping="Wrap" Text="Achteruit" VerticalAlignment="Top" FontSize="35" FontFamily="Raleway" FontWeight="Bold"/>
+            <Border HorizontalAlignment="Left" Height="40" Margin="1723,972,0,0" Background="#FFFFB34F" BorderBrush="Black" BorderThickness="1" VerticalAlignment="Top" Width="7"/>
+            <Border HorizontalAlignment="Left" Height="40" Margin="1592,983,0,0" Background="#FFFFB34F" BorderBrush="Black" BorderThickness="1" VerticalAlignment="Top" Width="7"/>
+            <Border HorizontalAlignment="Left" Height="40" Margin="1450,972,0,0" Background="#FFFFB34F" BorderBrush="Black" BorderThickness="1" VerticalAlignment="Top" Width="7"/>
+            <Border HorizontalAlignment="Left" Height="40" Margin="1597,678,0,0" Background="#FFFFB34F" BorderBrush="Black" BorderThickness="1" VerticalAlignment="Top" Width="7" RenderTransformOrigin="0.698,0.672"/>
 
         </Grid>
     </Viewbox>
