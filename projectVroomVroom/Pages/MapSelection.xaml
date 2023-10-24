@@ -13,6 +13,8 @@
             <Rectangle Fill="Black"  HorizontalAlignment="Center" Height="30"  VerticalAlignment="Center" Width="1920"/>
             <Rectangle Fill="#FFFFB34F"  HorizontalAlignment="Center" Height="15"  VerticalAlignment="Center" Width="1920"/>
             <Button Width="249" Height="75" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="25,0,0,25" Background="#B1B1B1" BorderBrush="Black" Content="TERUG" FontSize="48" FontFamily="Raleway" FontWeight="Bold" BorderThickness="2,2,2,2" Click="BackButtonClick"/>
+            <Label Content="Zandvoort" HorizontalAlignment="Left" Margin="51,21,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="36" Background="#FFFFB34F" BorderBrush="#FF140707" BorderThickness="5,5,5,5" Height="75"/>
+            <Label Content="Interlagos" HorizontalAlignment="Left" Margin="51,595,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="36" Background="#FFFFB34F" BorderBrush="#FF140707" BorderThickness="5,5,5,5" Height="75"/>
         </Grid>
     </Viewbox>
 </UserControl>
