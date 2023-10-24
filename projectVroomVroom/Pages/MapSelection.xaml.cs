@@ -20,9 +20,30 @@ namespace projectVroomVroom.Pages
     /// </summary>
     public partial class MapSelection : UserControl
     {
+
+        private MainWindow mainWindow = (MainWindow)Application.Current.MainWindow;
+
+
         public MapSelection()
         {
             InitializeComponent();
         }
+
+        private void Zandvoort_MouseDown(object sender, MouseEventArgs e) 
+        {
+            mainWindow.Content = new Pages.Zandvoort();
+        }
+
+        private void Interlagos_MouseDown(object sender, MouseEventArgs e)
+        {
+            mainWindow.Content = new Pages.Interlagos();
+        }
+
+        private void BackButtonClick(object sender, RoutedEventArgs e)
+        {
+            mainWindow.Content = new Pages.CarSelection(); // Navigate back to the main menu
+        }
+
+
     }
 }

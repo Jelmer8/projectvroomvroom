@@ -40,7 +40,7 @@ namespace projectVroomVroom.Pages
         {
             if (_isReady1 && _isReady2) // If both players are ready
             {
-                mainWindow.Content = new Pages.Zandvoort(); // Navigate to the Circuit page
+                mainWindow.Content = new Pages.MapSelection(); // Navigate to the Circuit page
             }
         }
 
