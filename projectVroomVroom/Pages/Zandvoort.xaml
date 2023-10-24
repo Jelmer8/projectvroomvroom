@@ -1,0 +1,47 @@
+﻿<UserControl x:Class="projectVroomVroom.Pages.Zandvoort"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:projectVroomVroom.Pages"
+             mc:Ignorable="d" 
+        d:DesignHeight="1200" d:DesignWidth="1630">
+    <Grid x:Name="grdMain" >
+        <Path x:Name="borderPath" Stroke="Red" StrokeThickness="45" 
+          Data="{Binding Data, ElementName=trackPath}" />
+        <Path x:Name="trackPath" Stroke="Gray" StrokeThickness="35">
+            <Path.Data>
+                <PathGeometry>
+                    <PathGeometry.Figures>
+                        <PathFigure StartPoint="480,95">
+                            <PolyLineSegment Points="54,932"/>
+                            <QuadraticBezierSegment Point1="69,1020" Point2="220,1116"/>
+                            <PolyLineSegment Points="440,1093"/>
+                            <QuadraticBezierSegment Point1="460,1038" Point2="395,715"/>
+                            <QuadraticBezierSegment Point1="430,688" Point2="476,690"/>
+                            <QuadraticBezierSegment Point1="524,733" Point2="920,622"/>
+                            <PolyLineSegment Points="1120,604"/>
+                            <QuadraticBezierSegment Point1="1347,624" Point2="1376,668"/>
+                            <PolyLineSegment Points="1338,725"/>
+                            <QuadraticBezierSegment Point1="1133,769" Point2="1060,825"/>
+                            <PolyLineSegment Points="1131,894"/>
+                            <QuadraticBezierSegment Point1="1375,922" Point2="1484,758"/>
+                            <PolyLineSegment Points="1580,634"/>
+                            <PolyLineSegment Points="1568,543"/>
+                            <QuadraticBezierSegment Point1="1440,486" Point2="1200,481"/>
+                            <PolyLineSegment Points="932,574"/>
+                            <QuadraticBezierSegment Point1="612,546" Point2="354,593"/>
+                            <QuadraticBezierSegment Point1="316,554" Point2="352,508"/>
+                            <PolyLineSegment Points="490,449"/>
+                            <QuadraticBezierSegment Point1="506,303" Point2="591,121"/>
+                            <QuadraticBezierSegment Point1="548,78" Point2="490,95"/>
+                            <QuadraticBezierSegment Point1="490,95" Point2="480,95"/>
+                            <PolyLineSegment Points="480,98"/>
+
+                        </PathFigure>
+                    </PathGeometry.Figures>
+                </PathGeometry>
+            </Path.Data>
+        </Path>
+    </Grid>
+</UserControl>

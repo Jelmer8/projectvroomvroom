@@ -10,21 +10,25 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace projectVroomVroom
+namespace projectVroomVroom.Pages
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for Zandvoort.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Zandvoort : UserControl
     {
-        public MainWindow()
+
+        private MainWindow mainWindow = (MainWindow)Application.Current.MainWindow;
+
+
+        public Zandvoort()
         {
             InitializeComponent();
-            this.Content = new Pages.MainMenu(); // Navigate to the main menu
-            WindowState = WindowState.Maximized;
-            WindowStyle = WindowStyle.None;
         }
+
+
     }
 }

@@ -10,21 +10,22 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace projectVroomVroom
+namespace projectVroomVroom.Pages
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for Interlagos.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Interlagos : UserControl
     {
-        public MainWindow()
+
+        private MainWindow mainWindow = (MainWindow)Application.Current.MainWindow;
+
+        public Interlagos()
         {
             InitializeComponent();
-            this.Content = new Pages.MainMenu(); // Navigate to the main menu
-            WindowState = WindowState.Maximized;
-            WindowStyle = WindowStyle.None;
         }
     }
 }
