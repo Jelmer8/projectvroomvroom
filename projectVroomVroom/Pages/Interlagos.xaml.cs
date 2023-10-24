@@ -10,27 +10,22 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace projectVroomVroom.Circuit
+namespace projectVroomVroom.Pages
 {
     /// <summary>
-    /// Interaction logic for Circuit.xaml
+    /// Interaction logic for Interlagos.xaml
     /// </summary>
-    public partial class Circuit : UserControl, ICircuit
+    public partial class Interlagos : UserControl
     {
-        public Circuit()
+
+        private MainWindow mainWindow = (MainWindow)Application.Current.MainWindow;
+
+        public Interlagos()
         {
             InitializeComponent();
-        }
-        public Path TrackPath
-        {
-            get { return trackPath; }
-        }
-
-        public Size GetSize()
-        {
-            return new Size(grdMain.Width, grdMain.Height);
         }
     }
 }

@@ -10,27 +10,25 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace projectVroomVroom.Circuit
+namespace projectVroomVroom.Pages
 {
     /// <summary>
-    /// Interaction logic for Circuit.xaml
+    /// Interaction logic for Zandvoort.xaml
     /// </summary>
-    public partial class Circuit : UserControl, ICircuit
+    public partial class Zandvoort : UserControl
     {
-        public Circuit()
+
+        private MainWindow mainWindow = (MainWindow)Application.Current.MainWindow;
+
+
+        public Zandvoort()
         {
             InitializeComponent();
         }
-        public Path TrackPath
-        {
-            get { return trackPath; }
-        }
 
-        public Size GetSize()
-        {
-            return new Size(grdMain.Width, grdMain.Height);
-        }
+
     }
 }

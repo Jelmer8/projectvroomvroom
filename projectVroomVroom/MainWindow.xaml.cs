@@ -23,6 +23,8 @@ namespace projectVroomVroom
         {
             InitializeComponent();
             this.Content = new Pages.MainMenu(); // Navigate to the main menu
+            WindowState = WindowState.Maximized;
+            WindowStyle = WindowStyle.None;
         }
     }
 }
