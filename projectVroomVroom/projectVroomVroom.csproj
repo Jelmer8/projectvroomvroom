@@ -23,6 +23,8 @@
 	<None Remove="Images\wasd_keybinds.png" />
 	<None Remove="Images\keyboard_keybinds.png" />
 	<None Remove="Images\exit_button.png" />
+  <None Remove="Images\zandvoort.jpeg" />
+  <None Remove="Images\interlagos.jpg" />
   </ItemGroup>
 
   <ItemGroup>
@@ -43,6 +45,8 @@
 	<Resource Include="Images\wasd_keybinds.png" />
 	<Resource Include="Images\keyboard_keybinds.png" />
     <Resource Include="Images\exit_button.png" />
+    <Resource Include="Images\zandvoort.jpeg" />
+  <Resource Include="Images\interlagos.jpg" />
   </ItemGroup>
 
 </Project>
