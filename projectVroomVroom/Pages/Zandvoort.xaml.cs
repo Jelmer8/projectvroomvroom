@@ -46,5 +46,9 @@ namespace projectVroomVroom.Pages
                 }
             }
         }
+        private void MainMenuButton(object sender, RoutedEventArgs e)
+        {
+            mainWindow.Content = new Pages.MainMenu(); // Navigate back to the main menu
+        }
     }
 }
