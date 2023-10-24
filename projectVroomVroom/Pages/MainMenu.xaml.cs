@@ -47,5 +47,9 @@ namespace projectVroomVroom.Pages
         {
             mainWindow.Content = new Pages.Info(); //Navigate to the Info page
         }
+        private void ExitButtonClick(object sender, RoutedEventArgs e)
+        {
+            Environment.Exit(1); //Navigate to the Info page
+        }
     }
 }
