@@ -43,5 +43,14 @@
                 </PathGeometry>
             </Path.Data>
         </Path>
+        <Canvas x:Name="MenuCanvas" KeyDown="OnKeyDown" Focusable="True">
+            <Rectangle
+                x:Name="Menu"
+                Fill="Black"
+                Height="200"
+                Width="200"
+                Visibility="Hidden"
+                />
+        </Canvas>
     </Grid>
 </UserControl>

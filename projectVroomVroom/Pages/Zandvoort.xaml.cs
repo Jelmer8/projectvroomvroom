@@ -22,13 +22,29 @@ namespace projectVroomVroom.Pages
     {
 
         private MainWindow mainWindow = (MainWindow)Application.Current.MainWindow;
-
+        private Boolean VisibleCheck = false;
 
         public Zandvoort()
         {
             InitializeComponent();
+            MenuCanvas.Focus();
         }
 
-
+        private void OnKeyDown(object sender, KeyEventArgs e)
+        { 
+            if (e.Key == Key.Escape)
+            {
+                if (!VisibleCheck)
+                {
+                    Menu.Visibility = Visibility.Visible;
+                    VisibleCheck = true;
+                }
+                else
+                {
+                    Menu.Visibility = Visibility.Hidden;
+                    VisibleCheck = false;
+                }
+            }
+        }
     }
 }
