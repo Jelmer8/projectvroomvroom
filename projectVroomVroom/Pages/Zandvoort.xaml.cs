@@ -36,12 +36,12 @@ namespace projectVroomVroom.Pages
             {
                 if (!VisibleCheck)
                 {
-                    Menu.Visibility = Visibility.Visible;
+                    MenuCanvas.Visibility = Visibility.Visible;
                     VisibleCheck = true;
                 }
                 else
                 {
-                    Menu.Visibility = Visibility.Hidden;
+                    MenuCanvas.Visibility = Visibility.Hidden;
                     VisibleCheck = false;
                 }
             }
