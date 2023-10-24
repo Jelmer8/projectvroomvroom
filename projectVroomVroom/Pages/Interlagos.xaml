@@ -6,7 +6,7 @@
              xmlns:local="clr-namespace:projectVroomVroom.Pages"
              mc:Ignorable="d" d:DesignWidth="1200" Height="700">
     <Grid Margin="200,50,0,0">
-        <Path x:Name="interlagosBorder" Stroke="Red" StrokeThickness="30" 
+        <!--<Path x:Name="interlagosBorder" Stroke="Red" StrokeThickness="30" 
           Data="{Binding Data, ElementName=Interlagos}" />
         <Path x:Name="Interlagos" Stroke="Gray" StrokeThickness="20">
             <Path.Data>
@@ -45,6 +45,6 @@
                     </PathGeometry.Figures>
                 </PathGeometry>
             </Path.Data>
-        </Path>
+        </Path>-->
     </Grid>
 </UserControl>
