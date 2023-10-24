@@ -37,14 +37,20 @@ namespace projectVroomVroom.Pages
                 if (!VisibleCheck)
                 {
                     Menu.Visibility = Visibility.Visible;
+                    MenuGoMain.Visibility = Visibility.Visible;
                     VisibleCheck = true;
                 }
                 else
                 {
                     Menu.Visibility = Visibility.Hidden;
+                    MenuGoMain.Visibility = Visibility.Hidden;
                     VisibleCheck = false;
                 }
             }
+        }
+        private void MainMenuButton(object sender, RoutedEventArgs e)
+        {
+            mainWindow.Content = new Pages.MainMenu(); // Navigate back to the main menu
         }
     }
 }
