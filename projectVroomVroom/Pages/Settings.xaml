@@ -7,10 +7,19 @@
              mc:Ignorable="d" 
              d:DesignHeight="1080" d:DesignWidth="1920" Background="#646464">
     <Viewbox StretchDirection="Both" Stretch="Fill">
-        <Grid Width="1920" Height="1080">
+        <Canvas Width="1920" Height="1080">
 
-            <Button Width="249" Height="75" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="25,0,0,25" Background="#B1B1B1" BorderBrush="Black" Content="TERUG" FontSize="48" FontFamily="Raleway" FontWeight="Bold" BorderThickness="2,2,2,2" Click="BackButtonClick"/>
-
-        </Grid>
+            <Button Width="249" Height="75" HorizontalAlignment="Left" VerticalAlignment="Bottom" Canvas.Left="25" Canvas.Bottom="25" Background="#B1B1B1" BorderBrush="Black" Content="TERUG" FontSize="48" FontFamily="Raleway" FontWeight="Bold" BorderThickness="2,2,2,2" Click="BackButtonClick"/>
+            <Rectangle HorizontalAlignment="Left" Height="100" Stroke="Black" VerticalAlignment="Top" Width="441" Fill=" #FFFFB34F" Canvas.Left="86" Canvas.Top="98"/>
+            <Rectangle Height="100" Stroke="Black" Width="441" Canvas.Left="1384" Canvas.Top="405" Fill=" #FFFFB34F" HorizontalAlignment="Center" VerticalAlignment="Top"/>
+            <Rectangle Height="100" Stroke="Black" Width="441" Canvas.Left="1384" Canvas.Top="98" Fill="#FFFFB34F " HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <TextBlock> Text="" Fontsize=""</TextBlock>
+            <TextBlock TextWrapping="Wrap" Text="TAAL " FontSize="70" FontFamily="Raleway" FontWeight="Bold" RenderTransformOrigin="0.571,-6.734" Canvas.Left="208" Canvas.Top="114" Height="80" Width="198" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+            <TextBlock TextWrapping="Wrap" Text="GELUID GAME " FontSize="70" FontFamily="Raleway" FontWeight="Bold" RenderTransformOrigin="0.571,-6.734" Canvas.Left="1471" Canvas.Top="421" Height="80" Width="319" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+            <TextBlock TextWrapping="Wrap" Text="MUZIEK " FontSize="70" FontFamily="Raleway" FontWeight="Bold" RenderTransformOrigin="0.571,-6.734" Canvas.Left="1465" Canvas.Top="106" Height="80" Width="321" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+            <Button Width="441" Height="75" Canvas.Left="86" Canvas.Bottom="25" Background="#B1B1B1" BorderBrush="Black" Content="NEDERLANDS" FontSize="48" FontFamily="Raleway" FontWeight="Bold" BorderThickness="2,2,2,2" Click="BackButtonClick" HorizontalAlignment="Left" Canvas.Top="304" VerticalAlignment="Center"/>
+            <Button Width="441" Height="75" Canvas.Left="86" Canvas.Bottom="25" Background="#B1B1B1" BorderBrush="Black" Content="FRYSK" FontSize="48" FontFamily="Raleway" FontWeight="Bold" BorderThickness="2,2,2,2" Click="BackButtonClick" HorizontalAlignment="Left" Canvas.Top="455" VerticalAlignment="Center"/>
+            <Button Width="441" Height="74" Background="#B1B1B1" BorderBrush="Black" Content="ENGLISH" FontSize="48" FontFamily="Raleway" FontWeight="Bold" BorderThickness="2,2,2,2" Click="BackButtonClick" HorizontalAlignment="Left" Canvas.Left="86" Canvas.Top="652" VerticalAlignment="Center"/>
+        </Canvas>
     </Viewbox>
 </UserControl>
