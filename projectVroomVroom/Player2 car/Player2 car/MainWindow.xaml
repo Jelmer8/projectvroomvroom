@@ -1,0 +1,13 @@
+﻿<Window x:Class="vroom_vroom_cars.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:vroom_vroom_cars"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" KeyDown="MainWindow_KeyDown">
+    <!-- Hook the KeyDown event here -->
+    <Grid>
+        <Image Name="Player2" HorizontalAlignment="Left" Height="131" Margin="583,260,0,0" VerticalAlignment="Top" Width="58" Source="/gray f1.png"/>
+    </Grid>
+</Window>
