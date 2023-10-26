@@ -27,7 +27,6 @@
   <None Remove="Images\interlagos.jpg" />
     <None Remove="Images\house.png" />
     <None Remove="Images\protection.png" />
-    
 	<None Remove="Images\mute_icon.png" />
 	<None Remove="Images\sound_icon.png" />
 	<None Remove="Images\music_icon.png" />
