@@ -293,8 +293,7 @@
                 </PathGeometry>
             </Path.Data>
         </Path>
-
-        <Canvas x:Name="MenuCanvas" KeyDown="OnKeyDown" Focusable="True">
+        <Canvas x:Name="MenuCanvas" KeyDown="OnKeyDown" Focusable="True" Margin="665,200,665,550" Width="350" Height="500">
             <Rectangle
                 x:Name="Menu"
                 Fill="#646464"
