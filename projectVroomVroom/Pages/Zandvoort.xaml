@@ -293,15 +293,39 @@
                 </PathGeometry>
             </Path.Data>
         </Path>
-
-        <Canvas x:Name="MenuCanvas" KeyDown="OnKeyDown" Focusable="True">
+        <Canvas x:Name="MenuCanvas" KeyDown="OnKeyDown" Focusable="True" Margin="665,200,665,550" Width="350" Height="500">
             <Rectangle
                 x:Name="Menu"
-                Fill="Black"
-                Height="200"
-                Width="200"
+                Fill="#646464"
+                Stroke="Black"
+                StrokeThickness="3"
+                Height="500"
+                Width="350"
+                HorizontalAlignment="Left"
+                Canvas.Left="0"
+                Canvas.Top="0"
                 Visibility="Hidden"
-                />
+            />
+            <Image x:Name="MenuImage" HorizontalAlignment="Center" Source="/Images/background_title.png" Height="100" VerticalAlignment="Top" Width="350" Canvas.Left="0" Canvas.Top="40" Visibility="Hidden"/>
+            <Image x:Name="MuteMusicImage"  Source="/Images/mute_music_icon.png" Height="100" VerticalAlignment="Top" Width="100" Canvas.Left="10" Canvas.Top="240" Visibility="Hidden"/>
+            <Image x:Name="MusicImage"  Source="/Images/music_icon.png" Height="100" VerticalAlignment="Top" Width="100" Canvas.Left="10" Canvas.Top="240" Visibility="Hidden"/>
+            <Image x:Name="MuteSoundImage"  Source="/Images/mute_icon.png" Height="100" VerticalAlignment="Top" Width="100" Canvas.Left="10" Canvas.Top="130" Visibility="Hidden"/>
+            <Image x:Name="SoundImage"  Source="/Images/sound_icon.png" Height="100" VerticalAlignment="Top" Width="100" Canvas.Left="10" Canvas.Top="130" Visibility="Hidden"/>
+            <Label x:Name="MenuLabel" Content="Vroom Vroom" Foreground="#FFFFFF"  HorizontalAlignment="Center" Canvas.Left="63" Canvas.Top="34" VerticalAlignment="Top" Height="105" Width="500" FontSize="35" FontFamily="{StaticResource Pacifico}" Visibility="Hidden"/>
+            <Button x:Name="ButtonMenuResume" Width="290" Height="75" HorizontalAlignment="Left" VerticalAlignment="Bottom" Canvas.Left="29" Canvas.Bottom="245" Background="#B1B1B1" BorderBrush="Black" Content="DOORGAAN" FontSize="48" FontFamily="Raleway" FontWeight="Bold" BorderThickness="2,2,2,2" Click="MenuResumeButton" Visibility="Hidden"/>
+            <Button x:Name="ButtonMenuOptions" Width="290" Height="75" HorizontalAlignment="Left" VerticalAlignment="Bottom" Canvas.Left="29" Canvas.Bottom= "145" Background="#B1B1B1" BorderBrush="Black" Content="OPTIES" FontSize="48" FontFamily="Raleway" FontWeight="Bold" BorderThickness="2,2,2,2" Click="MenuOptionsButton" Visibility="Hidden"/>
+            <CheckBox x:Name="CheckboxSoundToggle" Canvas.Left="160" Canvas.Top="170" Checked="SoundCheckboxHandleChecked" Unchecked="SoundCheckboxHandleUnchecked" Visibility="Hidden">
+                <CheckBox.LayoutTransform>
+                    <ScaleTransform ScaleX="2" ScaleY="2" />
+                </CheckBox.LayoutTransform>
+            </CheckBox>
+            <CheckBox x:Name="CheckboxMusictoggle" Canvas.Left="160" Canvas.Top="275" Checked="MusicCheckboxHandleChecked" Unchecked="MusicCheckboxHandleUnchecked" Visibility="Hidden">
+                <CheckBox.LayoutTransform>
+                    <ScaleTransform ScaleX="2" ScaleY="2" />
+                </CheckBox.LayoutTransform>
+            </CheckBox>
+            <Button x:Name="ButtonMenuGoMain" Width="290" Height="75" HorizontalAlignment="Left" VerticalAlignment="Bottom" Canvas.Left="29" Canvas.Bottom="45" Background="#B1B1B1" BorderBrush="Black" Content="MENU" FontSize="48" FontFamily="Raleway" FontWeight="Bold" BorderThickness="2,2,2,2" Click="MainMenuButton" Visibility="Hidden"/>
+            <Button x:Name="ButtonOptionsBack" Width="290" Height="75" HorizontalAlignment="Left" VerticalAlignment="Bottom" Canvas.Left="29" Canvas.Bottom="45" Background="#B1B1B1" BorderBrush="Black" Content="TERUG" FontSize="48" FontFamily="Raleway" FontWeight="Bold" BorderThickness="2,2,2,2" Click="OptionsBackButton" Visibility="Hidden"/>
         </Canvas>
 
 

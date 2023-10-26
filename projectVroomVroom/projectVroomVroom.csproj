@@ -28,6 +28,10 @@
     <None Remove="Images\house.png" />
     <None Remove="Images\protection.png" />
     
+	<None Remove="Images\mute_icon.png" />
+	<None Remove="Images\sound_icon.png" />
+	<None Remove="Images\music_icon.png" />
+	<None Remove="Images\mute_music_icon.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -52,6 +56,10 @@
   <Resource Include="Images\interlagos.jpg" />
     <Resource Include="Images\house.png" />
     <Resource Include="Images\protection.png" />
+	<Resource Include="Images\mute_icon.png" />
+	<Resource Include="Images\sound_icon.png" />
+	<Resource Include="Images\music_icon.png" />
+	<Resource Include="Images\mute_music_icon.png" />
   </ItemGroup>
 
 </Project>
