@@ -297,11 +297,18 @@
         <Canvas x:Name="MenuCanvas" KeyDown="OnKeyDown" Focusable="True">
             <Rectangle
                 x:Name="Menu"
-                Fill="Black"
-                Height="200"
-                Width="200"
+                Fill="#646464"
+                Stroke="Black"
+                StrokeThickness="3"
+                Height="450"
+                Width="300"
+                HorizontalAlignment="Left"
+                Canvas.Left="0"
+                Canvas.Top="0"
                 Visibility="Hidden"
-                />
+            />
+
+            <Button x:Name="MenuGoMain" Width="249" Height="75" HorizontalAlignment="Left" VerticalAlignment="Bottom" Canvas.Left="25" Canvas.Top="350" Background="#B1B1B1" BorderBrush="Black" Content="MENU" FontSize="48" FontFamily="Raleway" FontWeight="Bold" BorderThickness="2,2,2,2" Click="MainMenuButton" Visibility="Hidden"/>
         </Canvas>
 
 
