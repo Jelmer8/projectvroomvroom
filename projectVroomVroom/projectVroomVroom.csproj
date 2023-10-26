@@ -23,11 +23,18 @@
 	<None Remove="Images\wasd_keybinds.png" />
 	<None Remove="Images\keyboard_keybinds.png" />
 	<None Remove="Images\exit_button.png" />
+<<<<<<< HEAD
   <None Remove="Images\zandvoort.jpeg" />
   <None Remove="Images\interlagos.jpg" />
     <None Remove="Images\house.png" />
     <None Remove="Images\protection.png" />
     
+=======
+	<None Remove="Images\mute_icon.png" />
+	<None Remove="Images\sound_icon.png" />
+	<None Remove="Images\music_icon.png" />
+	<None Remove="Images\mute_music_icon.png" />
+>>>>>>> Thomas
   </ItemGroup>
 
   <ItemGroup>
@@ -48,10 +55,17 @@
 	<Resource Include="Images\wasd_keybinds.png" />
 	<Resource Include="Images\keyboard_keybinds.png" />
     <Resource Include="Images\exit_button.png" />
+<<<<<<< HEAD
     <Resource Include="Images\zandvoort.jpeg" />
   <Resource Include="Images\interlagos.jpg" />
     <Resource Include="Images\house.png" />
     <Resource Include="Images\protection.png" />
+=======
+	<Resource Include="Images\mute_icon.png" />
+	<Resource Include="Images\sound_icon.png" />
+	<Resource Include="Images\music_icon.png" />
+	<Resource Include="Images\mute_music_icon.png" />
+>>>>>>> Thomas
   </ItemGroup>
 
 </Project>
