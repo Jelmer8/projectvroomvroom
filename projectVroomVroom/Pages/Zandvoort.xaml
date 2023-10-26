@@ -7,6 +7,256 @@
              mc:Ignorable="d" 
         d:DesignHeight="1200" d:DesignWidth="1630">
     <Grid x:Name="grdMain" >
+        <Canvas>
+
+            <Rectangle Height="1200"  Width="1630" Fill="#FF3D9A2F"/>
+            <Rectangle Height="258" Fill="#FFBFB338"  Canvas.Top="942" Width="73"/>
+            <Rectangle Height="179" Width="58" Fill="#FFBFB338" Canvas.Left="62" Canvas.Top="1021" HorizontalAlignment="Left" VerticalAlignment="Center" />
+            <Rectangle Height="179" Width="58" Fill="#FFBFB338" Canvas.Left="46" Canvas.Top="1073" HorizontalAlignment="Left" VerticalAlignment="Top" >
+                <Rectangle.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="-58.223"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Rectangle.RenderTransform>
+            </Rectangle>
+            <Rectangle Height="300" Width="88" Fill="#FFBFB338" Canvas.Left="120" Canvas.Top="1201" HorizontalAlignment="Left" VerticalAlignment="Top" >
+
+                <Rectangle.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="-90.519"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Rectangle.RenderTransform>
+            </Rectangle>
+            <Image Source="/Images/protection.png" Width="85" Height="57" Canvas.Top="1150" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="-6"/>
+            <Image Source="/Images/protection.png" Width="85" Height="57" Canvas.Top="1120" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="-6"/>
+            <Image Source="/Images/protection.png" Width="85" Height="57" Canvas.Top="1090" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="-6"/>
+            <Image Source="/Images/protection.png" Width="85" Height="57" Canvas.Top="1060" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="-6"/>
+            <Image Source="/Images/protection.png" Width="85" Height="57" Canvas.Top="1030" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="-6"/>
+            <Image Source="/Images/protection.png" Width="85" Height="57" Canvas.Top="1000" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="-6"/>
+            <Image Source="/Images/protection.png" Width="85" Height="57" Canvas.Top="970" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="-6"/>
+            <Image Source="/Images/protection.png" Width="85" Height="57" Canvas.Top="940" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="-6"/>
+
+            <Image Source="/Images/protection.png" Width="84" Height="58" Canvas.Top="1203" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="7" >
+                <Image.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="-90.627"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Image.RenderTransform>
+            </Image>
+            <Image Source="/Images/protection.png" Width="84" Height="58" Canvas.Top="1203" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="37" >
+                <Image.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="-90.627"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Image.RenderTransform>
+            </Image>
+            <Image Source="/Images/protection.png" Width="30" Height="58" Canvas.Top="1203" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="67" >
+                <Image.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="-90.627"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Image.RenderTransform>
+            </Image>
+            <Image Source="/Images/protection.png" Width="84" Height="58" Canvas.Top="1203" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="97" >
+                <Image.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="-90.627"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Image.RenderTransform>
+            </Image>
+            <Image Source="/Images/protection.png" Width="84" Height="58" Canvas.Top="1203" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="127" >
+                <Image.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="-90.627"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Image.RenderTransform>
+            </Image>
+            <Image Source="/Images/protection.png" Width="84" Height="58" Canvas.Top="1203" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="157" >
+                <Image.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="-90.627"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Image.RenderTransform>
+            </Image>
+            <Image Source="/Images/protection.png" Width="84" Height="58" Canvas.Top="1203" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="187" >
+                <Image.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="-90.627"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Image.RenderTransform>
+            </Image>
+            <Image Source="/Images/protection.png" Width="84" Height="58" Canvas.Top="1203" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="217" >
+                <Image.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="-90.627"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Image.RenderTransform>
+            </Image>
+            <Image Source="/Images/protection.png" Width="84" Height="58" Canvas.Top="1203" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="247" >
+                <Image.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="-90.627"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Image.RenderTransform>
+            </Image>
+            <Image Source="/Images/protection.png" Width="84" Height="58" Canvas.Top="1203" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="277" >
+                <Image.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="-90.627"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Image.RenderTransform>
+            </Image>
+            <Image Source="/Images/protection.png" Width="84" Height="58" Canvas.Top="1203" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="307" >
+                <Image.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="-90.627"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Image.RenderTransform>
+            </Image>
+            <Image Source="/Images/protection.png" Width="84" Height="58" Canvas.Top="27" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="450" >
+                <Image.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="-90.627"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Image.RenderTransform>
+            </Image>
+            <Image Source="/Images/protection.png" Width="84" Height="58" Canvas.Top="27" HorizontalAlignment="Left" VerticalAlignment="Center" Canvas.Left="486" >
+                <Image.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="-90.627"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Image.RenderTransform>
+            </Image>
+            <Image Source="/Images/protection.png" Width="84" Height="58" Canvas.Top="27" HorizontalAlignment="Left" VerticalAlignment="Center" Canvas.Left="522" >
+                <Image.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="-90.627"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Image.RenderTransform>
+            </Image>
+            <Image Source="/Images/protection.png" Width="84" Height="58" Canvas.Top="27" HorizontalAlignment="Left" VerticalAlignment="Center" Canvas.Left="558" >
+                <Image.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="-90.627"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Image.RenderTransform>
+            </Image>
+            <Image Source="/Images/protection.png" Width="84" Height="58" Canvas.Top="37" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="419" >
+                <Image.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="-107.433"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Image.RenderTransform>
+            </Image>
+            <Image Source="/Images/protection.png" Width="84" Height="58" Canvas.Top="59" HorizontalAlignment="Left" VerticalAlignment="Center" Canvas.Left="405" >
+                <Image.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="-136.136"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Image.RenderTransform>
+            </Image>
+            <Image Source="/Images/protection.png" Width="84" Height="58" Canvas.Top="91" HorizontalAlignment="Left" VerticalAlignment="Center" Canvas.Left="395" >
+                <Image.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="-158.246"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Image.RenderTransform>
+            </Image>
+            <Image Source="/Images/protection.png" Width="77" Height="55" Canvas.Top="533" Canvas.Left="290" >
+                <Image.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="-158.246"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Image.RenderTransform>
+            </Image>
+            <Image Source="/Images/protection.png" Width="77" Height="55" Canvas.Top="573" Canvas.Left="280" >
+                <Image.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="-166.759"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Image.RenderTransform>
+            </Image>
+           
+
+
+            <Image Source="/Images/house.png" Width="263" Height="182" Canvas.Left="137" Canvas.Top="1000"  HorizontalAlignment="Left" VerticalAlignment="Top">
+                <Image.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="-71.977"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Image.RenderTransform>
+
+            </Image>
+        </Canvas>
         <Path x:Name="borderPath" Stroke="Red" StrokeThickness="45" 
           Data="{Binding Data, ElementName=trackPath}" />
         <Path x:Name="trackPath" Stroke="Gray" StrokeThickness="35">
@@ -43,21 +293,17 @@
                 </PathGeometry>
             </Path.Data>
         </Path>
-        <Canvas x:Name="MenuCanvas" KeyDown="OnKeyDown" Focusable="True" Margin="552,199,778,551">
+
+        <Canvas x:Name="MenuCanvas" KeyDown="OnKeyDown" Focusable="True">
             <Rectangle
                 x:Name="Menu"
-                Fill="#646464"
-                Stroke="Black"
-                StrokeThickness="3"
-                Height="450"
-                Width="300"
-                HorizontalAlignment="Left"
-                Canvas.Left="0"
-                Canvas.Top="0"
+                Fill="Black"
+                Height="200"
+                Width="200"
                 Visibility="Hidden"
-            />
-
-            <Button x:Name="MenuGoMain" Width="249" Height="75" HorizontalAlignment="Left" VerticalAlignment="Bottom" Canvas.Left="25" Canvas.Top="350" Background="#B1B1B1" BorderBrush="Black" Content="MENU" FontSize="48" FontFamily="Raleway" FontWeight="Bold" BorderThickness="2,2,2,2" Click="MainMenuButton" Visibility="Hidden"/>
+                />
         </Canvas>
+
+
     </Grid>
 </UserControl>

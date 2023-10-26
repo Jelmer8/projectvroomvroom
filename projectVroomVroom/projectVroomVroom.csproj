@@ -25,6 +25,9 @@
 	<None Remove="Images\exit_button.png" />
   <None Remove="Images\zandvoort.jpeg" />
   <None Remove="Images\interlagos.jpg" />
+    <None Remove="Images\house.png" />
+    <None Remove="Images\protection.png" />
+    
   </ItemGroup>
 
   <ItemGroup>
@@ -47,6 +50,8 @@
     <Resource Include="Images\exit_button.png" />
     <Resource Include="Images\zandvoort.jpeg" />
   <Resource Include="Images\interlagos.jpg" />
+    <Resource Include="Images\house.png" />
+    <Resource Include="Images\protection.png" />
   </ItemGroup>
 
 </Project>
