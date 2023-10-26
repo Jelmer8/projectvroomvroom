@@ -62,7 +62,7 @@
                     </TransformGroup>
                 </Image.RenderTransform>
             </Image>
-            <Image Source="/Images/protection.png" Width="84" Height="58" Canvas.Top="1203" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="67" >
+            <Image Source="/Images/protection.png" Width="30" Height="58" Canvas.Top="1203" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="67" >
                 <Image.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform/>
