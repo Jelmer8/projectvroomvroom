@@ -26,6 +26,7 @@ namespace projectVroomVroom.Pages
         private Boolean VisibleCheck = false;
         private Boolean SoundMuted = false;
         private Boolean MusicMuted = false;
+        public double Wheelangle = 0;
 
         public Zandvoort()
         {
@@ -162,78 +163,56 @@ namespace projectVroomVroom.Pages
         /// 
 
 
+        public double Acceleration = 0;
+        public double Player1Acceleration = 0;
+        public double Player1Speed = 0;
+        public double frictionOnTrack = 1.0;
+        public double groundFactor = 1.0;
 
-        private double playerOneCarPositionX = 0;
-        private double playerOneCarPositionY = 0;
 
 
-        private void MainWindow_KeyDown(object sender, KeyEventArgs e)
-        {
-            switch (e.Key)
+
+
+
+
+
+        void gameLoopTimer_Tick(object sender, KeyEventArgs e) {
+
+
+
+
+            if (e.Key == Key.W)
             {
-                case Key.W:
-                    MoveUpPlayerOneCar();
-                    break;
-                case Key.A:
-                    MoveLeftPlayerOneCar();
-                    break;
-                case Key.S:
-                    MoveDownPlayerOneCar();
-                    break;
-                case Key.D:
-                    MoveRightPlayerOneCar();
-                    break;
+                Player1Acceleration += 0.001;
             }
-        }
-
-
-        void gameLoopTimer_Tick(object sender, EventArgs e) {
-
-            if (car.IsSpeedingUp)
+            else if (e.Key == Key.S)
             {
-                car.Acceleration += 0.001;
+
+                Player1Acceleration -= 0.01;
+                Player1Speed *= (1.0 - frictionOnTrack);
             }
-            else if (car.IsSlowingDown)
+            else if (e.Key == Key.A)
             {
-                if (car.Speed > 0 && car.Acceleration >= 0)
-                    car.Acceleration -= 0.01;
-
-                car.Speed *= (1.0 - frictionOnTrack);
+               ///  car.Speed *= (1.0 - frictionOnTrack);
             }
-            else
+            else if (e.Key == Key.D)
             {
-                car.Speed *= (1.0 - frictionOnTrack);
+
+            }
+            else 
+            {
+                Player1Speed *= (1 - frictionOnTrack);
             }
 
+
+
+            if (Player1Speed < 10)
+
+
+                Player1Speed = Player1Speed + Player1Acceleration * groundFactor;
+
+
         }
-
-
-
-
-private void MoveUpPlayerOneCar()
-        {
-            playerOneCarPositionY -= 10;
-            Player1.Margin = new Thickness(playerOneCarPositionX, playerOneCarPositionY, 0, 0);
-        }
-
-        private void MoveLeftPlayerOneCar()
-        {
-            playerOneCarPositionX -= 10;
-            Player1.Margin = new Thickness(playerOneCarPositionX, playerOneCarPositionY, 0, 0);
-        }
-
-        private void MoveDownPlayerOneCar()
-        {
-            playerOneCarPositionY += 10;
-            Player1.Margin = new Thickness(playerOneCarPositionX, playerOneCarPositionY, 0, 0);
-        }
-
-        private void MoveRightPlayerOneCar()
-        {
-            playerOneCarPositionX += 10;
-            Player1.Margin = new Thickness(playerOneCarPositionX, playerOneCarPositionY, 0, 0);
-        }
-
     }
  }
 

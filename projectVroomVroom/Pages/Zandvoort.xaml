@@ -329,7 +329,7 @@
         </Canvas>
         
         
-        <Image x:Name="Player1" HorizontalAlignment="Left" Height="25" Margin="400,225,0,0" VerticalAlignment="Top" Width="15" Source="/green f1.png"/>
+        <Image x:Name="Player1" HorizontalAlignment="Left" Height="25" Margin="400,225,0,0" VerticalAlignment="Top" Width="15" Source="/green f1.png" />
 
     </Grid>
 </UserControl>
