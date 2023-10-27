@@ -32,6 +32,8 @@
 	<None Remove="Images\sound_icon.png" />
 	<None Remove="Images\music_icon.png" />
 	<None Remove="Images\mute_music_icon.png" />
+  	<None Remove="Images\green_f1.png" />
+  	<None Remove="Images\gray_f1.png" />
   </ItemGroup>
 
   <ItemGroup>
@@ -60,6 +62,8 @@
 	<Resource Include="Images\sound_icon.png" />
 	<Resource Include="Images\music_icon.png" />
 	<Resource Include="Images\mute_music_icon.png" />
+  <Resource Include="Images\green_f1.png" />
+  <Resource Include="Images\gray_f1.png" />
   </ItemGroup>
 
 </Project>

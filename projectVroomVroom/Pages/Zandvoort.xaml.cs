@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.ConstrainedExecution;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -185,7 +186,31 @@ namespace projectVroomVroom.Pages
             }
         }
 
-        private void MoveUpPlayerOneCar()
+
+        void gameLoopTimer_Tick(object sender, EventArgs e) {
+
+            if (car.IsSpeedingUp)
+            {
+                car.Acceleration += 0.001;
+            }
+            else if (car.IsSlowingDown)
+            {
+                if (car.Speed > 0 && car.Acceleration >= 0)
+                    car.Acceleration -= 0.01;
+
+                car.Speed *= (1.0 - frictionOnTrack);
+            }
+            else
+            {
+                car.Speed *= (1.0 - frictionOnTrack);
+            }
+
+        }
+
+
+
+
+private void MoveUpPlayerOneCar()
         {
             playerOneCarPositionY -= 10;
             Player1.Margin = new Thickness(playerOneCarPositionX, playerOneCarPositionY, 0, 0);
@@ -208,10 +233,7 @@ namespace projectVroomVroom.Pages
             playerOneCarPositionX += 10;
             Player1.Margin = new Thickness(playerOneCarPositionX, playerOneCarPositionY, 0, 0);
         }
-    }
-}
-
-
 
     }
-}
+ }
+

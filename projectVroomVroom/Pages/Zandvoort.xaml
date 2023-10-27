@@ -327,6 +327,8 @@
             <Button x:Name="ButtonMenuGoMain" Width="290" Height="75" HorizontalAlignment="Left" VerticalAlignment="Bottom" Canvas.Left="29" Canvas.Bottom="45" Background="#B1B1B1" BorderBrush="Black" Content="MENU" FontSize="48" FontFamily="Raleway" FontWeight="Bold" BorderThickness="2,2,2,2" Click="MainMenuButton" Visibility="Hidden"/>
             <Button x:Name="ButtonOptionsBack" Width="290" Height="75" HorizontalAlignment="Left" VerticalAlignment="Bottom" Canvas.Left="29" Canvas.Bottom="45" Background="#B1B1B1" BorderBrush="Black" Content="TERUG" FontSize="48" FontFamily="Raleway" FontWeight="Bold" BorderThickness="2,2,2,2" Click="OptionsBackButton" Visibility="Hidden"/>
         </Canvas>
+        
+        
         <Image x:Name="Player1" HorizontalAlignment="Left" Height="25" Margin="400,225,0,0" VerticalAlignment="Top" Width="15" Source="/green f1.png"/>
 
     </Grid>
