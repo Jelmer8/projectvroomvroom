@@ -4,209 +4,257 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:projectVroomVroom.Pages"
-             mc:Ignorable="d" d:DesignWidth="1920" d:DesignHeight="1080" Background="#FF3D9A2F">
-    <Viewbox StretchDirection="Both" Stretch="Fill">
-        <Grid Margin="200,50,0,0">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="37*"/>
-                <RowDefinition Height="93*"/>
-            </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="253*"/>
-                <ColumnDefinition Width="747*"/>
-            </Grid.ColumnDefinitions>
-            <Path x:Name="interlagosBorder" Stroke="Red" StrokeThickness="30" 
-          Data="{Binding Data, ElementName=trackPath}" Grid.ColumnSpan="2" Grid.RowSpan="2" Margin="-93,0,71,70" Stretch="Fill" />
-            <Path x:Name="trackPath" Stroke="Gray" StrokeThickness="20" Grid.ColumnSpan="2" Grid.RowSpan="2" Margin="-88,5,76,75" Stretch="Fill">
-                <Path.Data>
-                    <PathGeometry>
-                        <PathGeometry.Figures>
-                            <PathFigure StartPoint="550,430">
-                                <PolyLineSegment Points="776,354"/>
-                                <PolyLineSegment Points="736,303"/>
-                                <PolyLineSegment Points="762,237"/>
-                                <PolyLineSegment Points="755,181"/>
-                                <PolyLineSegment Points="677,112"/>
-                                <PolyLineSegment Points="221,12"/>
-                                <PolyLineSegment Points="189,107"/>
-                                <PolyLineSegment Points="197,138"/>
-                                <PolyLineSegment Points="220,174"/>
-                                <PolyLineSegment Points="436,326"/>
-                                <PolyLineSegment Points="446,375"/>
-                                <PolyLineSegment Points="417,428"/>
-                                <PolyLineSegment Points="316,452"/>
-                                <PolyLineSegment Points="292,428"/>
-                                <PolyLineSegment Points="318,376"/>
-                                <PolyLineSegment Points="283,345"/>
-                                <PolyLineSegment Points="214,404"/>
-                                <PolyLineSegment Points="138,409"/>
-                                <PolyLineSegment Points="135,382"/>
-                                <PolyLineSegment Points="189,336"/>
-                                <PolyLineSegment Points="201,297"/>
-                                <PolyLineSegment Points="178,245"/>
-                                <PolyLineSegment Points="41,170"/>
-                                <PolyLineSegment Points="3,263"/>
-                                <PolyLineSegment Points="36,379"/>
-                                <PolyLineSegment Points="91,444"/>
-                                <PolyLineSegment Points="332,497"/>
-                                <PolyLineSegment Points="550,430"/>
-                            </PathFigure>
-                        </PathGeometry.Figures>
-                    </PathGeometry>
-                </Path.Data>
-            </Path>
-            <Image Margin="10,123,207,446" Source="/Images/house2.png" Stretch="Fill" Grid.Row="1"/>
-            <Image Margin="246,185,316,519" Source="/Images/house.png" Stretch="Fill" Grid.Column="1" Grid.RowSpan="2"/>
-            <Image Margin="1335,256,49,407" Width="50" Height="110" Source="/Images/protection.png" Stretch="Fill" RenderTransformOrigin="0.5,0.5" Grid.Column="1" Grid.Row="1">
-                <Image.RenderTransform>
-                    <TransformGroup>
-                        <ScaleTransform/>
-                        <SkewTransform/>
-                        <RotateTransform Angle="144.77"/>
-                        <TranslateTransform/>
-                    </TransformGroup>
-                </Image.RenderTransform>
-            </Image>
-            <Image Margin="1369,319,15,344" Width="50" Height="110" Source="/Images/protection.png" Stretch="Fill" RenderTransformOrigin="0.5,0.5" Grid.Column="1" Grid.Row="1">
-                <Image.RenderTransform>
-                    <TransformGroup>
-                        <ScaleTransform/>
-                        <SkewTransform/>
-                        <RotateTransform Angle="164.885"/>
-                        <TranslateTransform/>
-                    </TransformGroup>
-                </Image.RenderTransform>
-            </Image>
-            <Image Margin="1354,379,30,284" Width="50" Height="110" Source="/Images/protection.png" Stretch="Fill" RenderTransformOrigin="0.5,0.5" Grid.Column="1" Grid.Row="1">
-                <Image.RenderTransform>
-                    <TransformGroup>
-                        <ScaleTransform/>
-                        <SkewTransform/>
-                        <RotateTransform Angle="246.256"/>
-                        <TranslateTransform/>
-                    </TransformGroup>
-                </Image.RenderTransform>
-            </Image>
-            <Image Margin="1284,399,100,264" Width="50" Height="110" Source="/Images/protection.png" Stretch="Fill" RenderTransformOrigin="0.5,0.5" Grid.Column="1" Grid.Row="1">
-                <Image.RenderTransform>
-                    <TransformGroup>
-                        <ScaleTransform/>
-                        <SkewTransform/>
-                        <RotateTransform Angle="254.555"/>
-                        <TranslateTransform/>
-                    </TransformGroup>
-                </Image.RenderTransform>
-            </Image>
-            <Image Margin="340,-13,96,210" Width="50" Height="110" Source="/Images/protection.png" Stretch="Fill" RenderTransformOrigin="0.5,0.5">
-                <Image.RenderTransform>
-                    <TransformGroup>
-                        <ScaleTransform/>
-                        <SkewTransform/>
-                        <RotateTransform Angle="203.916"/>
-                        <TranslateTransform/>
-                    </TransformGroup>
-                </Image.RenderTransform>
-            </Image>
-            <Image Margin="385,-71,51,268" Width="50" Height="110" Source="/Images/protection.png" Stretch="Fill" RenderTransformOrigin="0.5,0.5">
-                <Image.RenderTransform>
-                    <TransformGroup>
-                        <ScaleTransform/>
-                        <SkewTransform/>
-                        <RotateTransform Angle="243.333"/>
-                        <TranslateTransform/>
-                    </TransformGroup>
-                </Image.RenderTransform>
-            </Image>
-            <Image Margin="477,-76,1393,273" Width="50" Height="110" Source="/Images/protection.png" Stretch="Fill" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="2">
-                <Image.RenderTransform>
-                    <TransformGroup>
-                        <ScaleTransform/>
-                        <SkewTransform/>
-                        <RotateTransform Angle="279.512"/>
-                        <TranslateTransform/>
-                    </TransformGroup>
-                </Image.RenderTransform>
-            </Image>
-            <Image Margin="-91,297,527,673" Width="50" Height="110" Source="/Images/protection.png" Stretch="Fill" RenderTransformOrigin="0.5,0.5" Grid.RowSpan="2">
-                <Image.RenderTransform>
-                    <TransformGroup>
-                        <ScaleTransform/>
-                        <SkewTransform/>
-                        <RotateTransform Angle="210.468"/>
-                        <TranslateTransform/>
-                    </TransformGroup>
-                </Image.RenderTransform>
-            </Image>
-            <Image Margin="-54,247,490,723" Width="50" Height="110" Source="/Images/protection.png" Stretch="Fill" RenderTransformOrigin="0.5,0.5" Grid.RowSpan="2">
-                <Image.RenderTransform>
-                    <TransformGroup>
-                        <ScaleTransform/>
-                        <SkewTransform/>
-                        <RotateTransform Angle="236.034"/>
-                        <TranslateTransform/>
-                    </TransformGroup>
-                </Image.RenderTransform>
-            </Image>
-            <Image Margin="14,233,422,737" Width="50" Height="110" Source="/Images/protection.png" Stretch="Fill" RenderTransformOrigin="0.5,0.5" Grid.RowSpan="2">
-                <Image.RenderTransform>
-                    <TransformGroup>
-                        <ScaleTransform/>
-                        <SkewTransform/>
-                        <RotateTransform Angle="276.079"/>
-                        <TranslateTransform/>
-                    </TransformGroup>
-                </Image.RenderTransform>
-            </Image>
-            <Image Margin="82,247,354,723" Width="50" Height="110" Source="/Images/protection.png" Stretch="Fill" RenderTransformOrigin="0.5,0.5" Grid.RowSpan="2">
-                <Image.RenderTransform>
-                    <TransformGroup>
-                        <ScaleTransform/>
-                        <SkewTransform/>
-                        <RotateTransform Angle="286.14"/>
-                        <TranslateTransform/>
-                    </TransformGroup>
-                </Image.RenderTransform>
-            </Image>
-            <Image Margin="160,459,276,204" Width="50" Height="110" Source="/Images/protection.png" Stretch="Fill" RenderTransformOrigin="0.5,0.5" Grid.Row="1">
-                <Image.RenderTransform>
-                    <TransformGroup>
-                        <ScaleTransform/>
-                        <SkewTransform/>
-                        <RotateTransform Angle="144.77"/>
-                        <TranslateTransform/>
-                    </TransformGroup>
-                </Image.RenderTransform>
-            </Image>
-            <Image Margin="229,503,207,160" Width="50" Height="110" Source="/Images/protection.png" Stretch="Fill" RenderTransformOrigin="0.5,0.5" Grid.Row="1">
-                <Image.RenderTransform>
-                    <TransformGroup>
-                        <ScaleTransform/>
-                        <SkewTransform/>
-                        <RotateTransform Angle="101.846"/>
-                        <TranslateTransform/>
-                    </TransformGroup>
-                </Image.RenderTransform>
-            </Image>
-            <Image Margin="163,292,1221,371" Width="50" Height="110" Source="/Images/protection.png" Stretch="Fill" RenderTransformOrigin="0.5,0.5" Grid.Column="1" Grid.Row="1">
-                <Image.RenderTransform>
-                    <TransformGroup>
-                        <ScaleTransform/>
-                        <SkewTransform/>
-                        <RotateTransform Angle="113.415"/>
-                        <TranslateTransform/>
-                    </TransformGroup>
-                </Image.RenderTransform>
-            </Image>
-            <Image Margin="82,281,1302,382" Width="50" Height="110" Source="/Images/protection.png" Stretch="Fill" RenderTransformOrigin="0.5,0.5" Grid.Column="1" Grid.Row="1">
-                <Image.RenderTransform>
-                    <TransformGroup>
-                        <ScaleTransform/>
-                        <SkewTransform/>
-                        <RotateTransform Angle="256.422"/>
-                        <TranslateTransform/>
-                    </TransformGroup>
-                </Image.RenderTransform>
-            </Image>
-        </Grid>
-    </Viewbox>
+             mc:Ignorable="d" d:DesignWidth="1200" Height="700" Background="#FF3D9A2F">
+    <Grid Margin="200,50,0,0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="37*"/>
+            <RowDefinition Height="93*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="253*"/>
+            <ColumnDefinition Width="747*"/>
+        </Grid.ColumnDefinitions>
+        <Path x:Name="interlagosBorder" Stroke="Red" StrokeThickness="30" 
+          Data="{Binding Data, ElementName=trackPath}" Grid.ColumnSpan="2" Grid.RowSpan="2" />
+        <Path x:Name="trackPath" Stroke="Gray" StrokeThickness="20" Grid.ColumnSpan="2" Grid.RowSpan="2">
+            <Path.Data>
+                <PathGeometry>
+                    <PathGeometry.Figures>
+                        <PathFigure StartPoint="550,430">
+                            <PolyLineSegment Points="776,354"/>
+                            <PolyLineSegment Points="736,303"/>
+                            <PolyLineSegment Points="762,237"/>
+                            <PolyLineSegment Points="755,181"/>
+                            <PolyLineSegment Points="677,112"/>
+                            <PolyLineSegment Points="221,12"/>
+                            <PolyLineSegment Points="189,107"/>
+                            <PolyLineSegment Points="197,138"/>
+                            <PolyLineSegment Points="220,174"/>
+                            <PolyLineSegment Points="436,326"/>
+                            <PolyLineSegment Points="446,375"/>
+                            <PolyLineSegment Points="417,428"/>
+                            <PolyLineSegment Points="316,452"/>
+                            <PolyLineSegment Points="292,428"/>
+                            <PolyLineSegment Points="318,376"/>
+                            <PolyLineSegment Points="283,345"/>
+                            <PolyLineSegment Points="214,404"/>
+                            <PolyLineSegment Points="138,409"/>
+                            <PolyLineSegment Points="135,382"/>
+                            <PolyLineSegment Points="189,336"/>
+                            <PolyLineSegment Points="201,297"/>
+                            <PolyLineSegment Points="178,245"/>
+                            <PolyLineSegment Points="41,170"/>
+                            <PolyLineSegment Points="3,263"/>
+                            <PolyLineSegment Points="36,379"/>
+                            <PolyLineSegment Points="91,444"/>
+                            <PolyLineSegment Points="332,497"/>
+                            <PolyLineSegment Points="550,430"/>
+                        </PathFigure>
+                    </PathGeometry.Figures>
+                </PathGeometry>
+            </Path.Data>
+        </Path>
+        <Image Margin="36,25,102,303" Source="/Images/house2.png" Stretch="Fill" Grid.Row="1"/>
+        <Image Margin="96,96,300,325" Source="/Images/house.png" Stretch="Fill" Grid.Column="1" Grid.RowSpan="2"/>
+        <Image Margin="113,37,101,82" Source="/Images/protection.png" Stretch="Fill" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="22.543"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Image Margin="161,-41,53,160" Source="/Images/protection.png" Stretch="Fill" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="60.842"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Image Margin="133,-12,81,131" Source="/Images/protection.png" Stretch="Fill" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="22.543"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Image Margin="203,-55,11,174" Source="/Images/protection.png" Stretch="Fill" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="93.28"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Image Margin="251,-48,710,167" Source="/Images/protection.png" Stretch="Fill" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="2">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="101.495"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Image Margin="560,148,148,251" Source="/Images/protection.png" Stretch="Fill" RenderTransformOrigin="0.5,0.5" Grid.Column="1" Grid.Row="1">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="22.543"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Image Margin="531,170,177,229" Source="/Images/protection.png" Stretch="Fill" RenderTransformOrigin="0.5,0.5" Grid.Column="1" Grid.Row="1">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="68.026"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Image Margin="500,184,208,215" Source="/Images/protection.png" Stretch="Fill" RenderTransformOrigin="0.5,0.5" Grid.Column="1" Grid.Row="1">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="71.243"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Image Margin="560,110,148,289" Source="/Images/protection.png" Stretch="Fill" RenderTransformOrigin="0.5,0.5" Grid.Column="1" Grid.Row="1">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-31.688"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Image Margin="542,77,166,322" Source="/Images/protection.png" Stretch="Fill" RenderTransformOrigin="0.5,0.5" Grid.Column="1" Grid.Row="1">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-9.252"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Image Margin="-4,84,218,35" Source="/Images/protection.png" Stretch="Fill" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="50.173"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Image Margin="36,83,178,36" Source="/Images/protection.png" Stretch="Fill" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="106.767"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Image Margin="-29,112,243,7" Source="/Images/protection.png" Stretch="Fill" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="22.543"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Image Margin="77,97,137,22" Source="/Images/protection.png" Stretch="Fill" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="117.055"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Image Margin="-45,148,259,436" Source="/Images/protection.png" Stretch="Fill" RenderTransformOrigin="0.5,0.5" Grid.RowSpan="2">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="22.543"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Image Margin="82,183,132,216" Source="/Images/protection.png" Stretch="Fill" RenderTransformOrigin="0.5,0.5" Grid.Row="1">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-26.776"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Image Margin="149,227,80,192" Source="/Images/protection.png" Stretch="Fill" RenderTransformOrigin="0.5,0.5" Grid.Row="1">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-79.281"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Image Margin="224,102,737,297" Source="/Images/protection.png" Stretch="Fill" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="2" Grid.Row="1">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="50.495"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Image Margin="15,82,693,317" Source="/Images/protection.png" Stretch="Fill" RenderTransformOrigin="0.5,0.5" Grid.Column="1" Grid.Row="1">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="106.989"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Image Margin="54,109,654,290" Source="/Images/protection.png" Stretch="Fill" RenderTransformOrigin="0.5,0.5" Grid.Column="1" Grid.Row="1">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-44.382"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+    </Grid>
 </UserControl>
