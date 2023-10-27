@@ -26,7 +26,7 @@ namespace projectVroomVroom
             this.Content = new Pages.MainMenu(); // Navigate to the main menu
             WindowState = WindowState.Maximized;
             WindowStyle = WindowStyle.None;
-            /// hoi 
+            
         }
         ///                 Om de auto te versnellen en de snelheid te bepalen gebruik zo'n code
         ///                 if (car.Speed + car.Acceleration < car.MaxSpeed)
