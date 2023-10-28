@@ -15,6 +15,7 @@
     <None Remove="Images\background_title.png" />
     <None Remove="Images\car1.png" />
     <None Remove="Images\car2.png" />
+    <None Remove="Images\house2.png" />
 	<None Remove="Images\Minimalist_info_Icon.png" />
 	<None Remove="Images\map1.png" />
 	<None Remove="Images\map2.png" />
@@ -43,6 +44,7 @@
     <Resource Include="Images\background_title.png" />
     <Resource Include="Images\car1.png" />
     <Resource Include="Images\car2.png" />
+    <Resource Include="Images\house2.png" />
 	<Resource Include="Images\Minimalist_info_Icon.png" />
 	<Resource Include="Images\map1.png" />
 	<Resource Include="Images\map2.png" />
