@@ -65,14 +65,14 @@ namespace projectVroomVroom.Pages
             mediaPlayer.Open(new Uri("music.mp3", UriKind.RelativeOrAbsolute));
             mediaPlayer.Play();
 
-            // Add an event handler to handle media ended
+            
             mediaPlayer.MediaEnded += MediaPlayer_MediaEnded;
         }
 
         private void MediaPlayer_MediaEnded(object sender, EventArgs e)
         {
-            // Handle media playback end, e.g., loop or perform other actions
-            mediaPlayer.Position = TimeSpan.Zero; // This will loop the media
+            
+            mediaPlayer.Position = TimeSpan.Zero; 
         }
 
 
