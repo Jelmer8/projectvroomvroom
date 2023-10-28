@@ -13,13 +13,42 @@
             <Rectangle HorizontalAlignment="Left" Height="100" Stroke="Black" VerticalAlignment="Top" Width="441" Fill=" #FFFFB34F" Canvas.Left="86" Canvas.Top="98"/>
             <Rectangle Height="100" Stroke="Black" Width="441" Canvas.Left="1384" Canvas.Top="405" Fill=" #FFFFB34F" HorizontalAlignment="Center" VerticalAlignment="Top"/>
             <Rectangle Height="100" Stroke="Black" Width="441" Canvas.Left="1384" Canvas.Top="98" Fill="#FFFFB34F " HorizontalAlignment="Left" VerticalAlignment="Top"/>
-            <TextBlock> Text="" Fontsize=""</TextBlock>
             <TextBlock TextWrapping="Wrap" Text="TAAL " FontSize="70" FontFamily="Raleway" FontWeight="Bold" RenderTransformOrigin="0.571,-6.734" Canvas.Left="208" Canvas.Top="114" Height="80" Width="198" HorizontalAlignment="Left" VerticalAlignment="Top"/>
             <TextBlock TextWrapping="Wrap" Text="GELUID GAME " FontSize="70" FontFamily="Raleway" FontWeight="Bold" RenderTransformOrigin="0.571,-6.734" Canvas.Left="1471" Canvas.Top="421" Height="80" Width="319" HorizontalAlignment="Left" VerticalAlignment="Center"/>
             <TextBlock TextWrapping="Wrap" Text="MUZIEK " FontSize="70" FontFamily="Raleway" FontWeight="Bold" RenderTransformOrigin="0.571,-6.734" Canvas.Left="1465" Canvas.Top="106" Height="80" Width="321" HorizontalAlignment="Left" VerticalAlignment="Center"/>
-            <Button Width="441" Height="75" Canvas.Left="86" Canvas.Bottom="25" Background="#B1B1B1" BorderBrush="Black" Content="NEDERLANDS" FontSize="48" FontFamily="Raleway" FontWeight="Bold" BorderThickness="2,2,2,2" Click="BackButtonClick" HorizontalAlignment="Left" Canvas.Top="304" VerticalAlignment="Center"/>
-            <Button Width="441" Height="75" Canvas.Left="86" Canvas.Bottom="25" Background="#B1B1B1" BorderBrush="Black" Content="FRYSK" FontSize="48" FontFamily="Raleway" FontWeight="Bold" BorderThickness="2,2,2,2" Click="BackButtonClick" HorizontalAlignment="Left" Canvas.Top="455" VerticalAlignment="Center"/>
-            <Button Width="441" Height="74" Background="#B1B1B1" BorderBrush="Black" Content="ENGLISH" FontSize="48" FontFamily="Raleway" FontWeight="Bold" BorderThickness="2,2,2,2" Click="BackButtonClick" HorizontalAlignment="Left" Canvas.Left="86" Canvas.Top="652" VerticalAlignment="Center"/>
+            <Button Width="441" Height="75" Canvas.Left="86" Canvas.Bottom="25" Background="#B1B1B1" BorderBrush="Black" Content="NEDERLANDS" FontSize="48" FontFamily="Raleway" FontWeight="Bold" BorderThickness="2,2,2,2" Click="BackButtonClick" HorizontalAlignment="Center" Canvas.Top="283" VerticalAlignment="Top"/>
+            <Button Width="441" Height="75" Canvas.Left="86" Canvas.Bottom="25" Background="#B1B1B1" BorderBrush="Black" Content="FRIES" FontSize="48" FontFamily="Raleway" FontWeight="Bold" BorderThickness="2,2,2,2" Click="BackButtonClick" HorizontalAlignment="Center" Canvas.Top="436" VerticalAlignment="Top"/>
+            <Button Width="441" Height="74" Background="#B1B1B1" BorderBrush="Black" Content="ENGELS" FontSize="48" FontFamily="Raleway" FontWeight="Bold" BorderThickness="2,2,2,2" Click="BackButtonClick" HorizontalAlignment="Center" Canvas.Left="86" Canvas.Top="598" VerticalAlignment="Top"/>
+            <Rectangle Height="100" Canvas.Left="1381" Stroke="Black" Canvas.Top="567" Width="441" Fill="#B1B1B1" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+            <Rectangle Height="100" Canvas.Left="1383" Stroke="Black" Canvas.Top="259" Width="440" Fill="#B1B1B1" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+            <Slider Canvas.Left="1388" Canvas.Top="277" Width="134" Height="34" HorizontalAlignment="Left" VerticalAlignment="Top">
+                <Slider.LayoutTransform>
+                    <ScaleTransform ScaleX="3" ScaleY="3" />
+                </Slider.LayoutTransform>
+            </Slider>
+            <Slider Canvas.Left="1384" Canvas.Top="589" Width="136" Height="32" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#FFE5E5E5">
+                <Slider.LayoutTransform>
+                    <ScaleTransform ScaleX="3" ScaleY="3" />
+                </Slider.LayoutTransform>
+                <Slider.Resources>
+                    <SolidColorBrush x:Key="SliderSelectionBackground" Color="Green" />
+                    <SolidColorBrush x:Key="SliderSelectionBorder" Color="Green" />
+                    <SolidColorBrush x:Key="SliderThumbBackground" Color="Green" />
+                    <SolidColorBrush x:Key="SliderThumbBackgroundDisabled" Color="Green" />
+                    <SolidColorBrush x:Key="SliderThumbBackgroundDragging" Color="Green" />
+                    <SolidColorBrush x:Key="SliderThumbBackgroundHover" Color="Green" />
+                    <SolidColorBrush x:Key="SliderThumbBorder" Color="Green" />
+                    <SolidColorBrush x:Key="SliderThumbBorderDisabled" Color="Green" />
+                    <SolidColorBrush x:Key="SliderThumbBorderDragging" Color="Green" />
+                    <SolidColorBrush x:Key="SliderThumbBorderHover" Color="Green" />
+                </Slider.Resources>
+            </Slider>
+
+            <Label Content="-" Canvas.Left="1287" FontSize="200" Canvas.Top="139" HorizontalAlignment="Left" Height="194" VerticalAlignment="Center" Width="100"/>
+            <Label Content="+" Canvas.Left="1812" FontSize="180" Canvas.Top="158" Height="208" Width="124" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+            <Label Content="+" Canvas.Left="1815" FontSize="180" Canvas.Top="469" Height="222" Width="124" HorizontalAlignment="Left" VerticalAlignment="Center" RenderTransformOrigin="0.558,2.122"/>
+            <Label Content="-" Canvas.Left="1287" FontSize="200" Canvas.Top="451" Height="194" Width="100" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+
         </Canvas>
     </Viewbox>
 </UserControl>
