@@ -28,6 +28,9 @@ namespace projectVroomVroom
             WindowStyle = WindowStyle.None;
             
         }
+
+
+
         ///                 Om de auto te versnellen en de snelheid te bepalen gebruik zo'n code
         ///                 if (car.Speed + car.Acceleration < car.MaxSpeed)
         ///                 car.Speed = car.Speed + car.Acceleration* groundFactor;

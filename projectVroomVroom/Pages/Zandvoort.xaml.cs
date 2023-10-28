@@ -1,7 +1,10 @@
 ﻿using projectVroomVroom;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Media;
+using System.Numerics;
 using System.Runtime.ConstrainedExecution;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,6 +18,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Windows.Threading;
+using WMPLib;
 
 namespace projectVroomVroom.Pages
 {
@@ -48,9 +52,23 @@ namespace projectVroomVroom.Pages
             gameLoopTimer.Interval = TimeSpan.FromMilliseconds(16); 
             gameLoopTimer.Tick += GameLoop;
             gameLoopTimer.Start();
+            InitializeMediaPlayer();
+
         }
 
-    
+        private void InitializeMediaPlayer()
+        {
+            WindowsMediaPlayer player = new WindowsMediaPlayer();
+
+            string fileName = "music.mp3";
+            // Provide the path to your MP3 file
+            string mp3FilePath = fileName;
+
+            // Load and play the MP3 file
+            player.URL = mp3FilePath;
+            player.controls.play();
+        }
+
 
         private void OnKeyDown2(object sender, KeyEventArgs e)
         {
