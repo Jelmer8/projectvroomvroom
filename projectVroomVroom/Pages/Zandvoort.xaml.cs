@@ -45,6 +45,7 @@ namespace projectVroomVroom.Pages
         public Zandvoort()
         {
             InitializeComponent();
+            InitializeMediaPlayer();
             canvas.Focus();
             this.KeyDown += OnKeyDown2;
             this.KeyUp += OnKeyUp;
@@ -52,22 +53,29 @@ namespace projectVroomVroom.Pages
             gameLoopTimer.Interval = TimeSpan.FromMilliseconds(16); 
             gameLoopTimer.Tick += GameLoop;
             gameLoopTimer.Start();
-            InitializeMediaPlayer();
+            
 
         }
+
+        private MediaPlayer mediaPlayer;
 
         private void InitializeMediaPlayer()
         {
-            WindowsMediaPlayer player = new WindowsMediaPlayer();
+            mediaPlayer = new MediaPlayer();
+            mediaPlayer.Open(new Uri("music.mp3", UriKind.RelativeOrAbsolute));
+            mediaPlayer.Play();
 
-            string fileName = "music.mp3";
-            // Provide the path to your MP3 file
-            string mp3FilePath = fileName;
-
-            // Load and play the MP3 file
-            player.URL = mp3FilePath;
-            player.controls.play();
+            // Add an event handler to handle media ended
+            mediaPlayer.MediaEnded += MediaPlayer_MediaEnded;
         }
+
+        private void MediaPlayer_MediaEnded(object sender, EventArgs e)
+        {
+            // Handle media playback end, e.g., loop or perform other actions
+            mediaPlayer.Position = TimeSpan.Zero; // This will loop the media
+        }
+
+
 
 
         private void OnKeyDown2(object sender, KeyEventArgs e)
