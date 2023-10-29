@@ -35,7 +35,7 @@ namespace projectVroomVroom.Pages
         private bool isAccelerating = false;
         private bool isReversing = false;
 
-
+        private MediaPlayer mediaPlayer;
         private MainWindow mainWindow = (MainWindow)Application.Current.MainWindow;
         private Boolean VisibleCheck = false;
         private Boolean SoundMuted = false;
@@ -57,7 +57,7 @@ namespace projectVroomVroom.Pages
 
         }
 
-        private MediaPlayer mediaPlayer;
+        
 
         private void InitializeMediaPlayer()
         {
