@@ -175,7 +175,7 @@ namespace projectVroomVroom.Pages
         private void CheckCollisionsWithCar()
         {
             Image car = Car; 
-            var otherImages = grdMain.Children.OfType<Image>().Where(img => img != car).ToList();
+            var otherImages = canvasMain.Children.OfType<Image>().Where(img => img != car).ToList();
 
             Rect carRect = new Rect(Canvas.GetLeft(car), Canvas.GetTop(car), car.Width, car.Height);
 

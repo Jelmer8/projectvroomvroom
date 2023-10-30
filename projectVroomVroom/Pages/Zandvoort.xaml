@@ -7,7 +7,7 @@
              mc:Ignorable="d" 
         d:DesignHeight="1200" d:DesignWidth="1630">
     <Grid x:Name="grdMain" >
-        <Canvas>
+        <Canvas x:Name="canvasMain">
 
             <Rectangle Height="1200"  Width="1630" Fill="#FF3D9A2F"/>
             <Rectangle Height="258" Fill="#FFBFB338"  Canvas.Top="942" Width="73"/>
