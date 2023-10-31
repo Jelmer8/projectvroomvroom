@@ -205,7 +205,7 @@ namespace projectVroomVroom.Pages
             }
             else if (isReversing)
             {
-                carVelocityBackward += carAcceleration;
+                carVelocityBackward += carAcceleration + 0.05;
             }
             else
             {
