@@ -14,6 +14,8 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.IO;
 using static System.Formats.Asn1.AsnWriter;
+using System.Windows.Controls.Primitives;
+using System.Windows.Media.TextFormatting;
 
 namespace projectVroomVroom.Pages
 {
@@ -33,6 +35,31 @@ namespace projectVroomVroom.Pages
             InitializeComponent();
             ImportLeaderboard();
             UpdateMap();
+
+            MainWindow.LANGUAGE lang = mainWindow.GetLanguage();
+            switch (lang)
+            {
+                case MainWindow.LANGUAGE.Nederlands:
+                    TextRank.Text = "Rank";
+                    TextName.Text = "Naam";
+                    TextTime.Text = "Tijd";
+                    ButtonBack.Content = "TERUG";
+                    break;
+
+                case MainWindow.LANGUAGE.Fries:
+                    TextRank.Text = "Rang";
+                    TextName.Text = "Namme";
+                    TextTime.Text = "Tiid";
+                    ButtonBack.Content = "WEROM";
+                    break;
+
+                case MainWindow.LANGUAGE.Engels:
+                    TextRank.Text = "Rank";
+                    TextName.Text = "Name";
+                    TextTime.Text = "Time";
+                    ButtonBack.Content = "BACK";
+                    break;
+            }
         }
 
         private void LeaderboardMapUpArrowButtonClick(object sender, RoutedEventArgs e)

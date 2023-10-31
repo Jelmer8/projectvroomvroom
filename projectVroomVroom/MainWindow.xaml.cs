@@ -20,14 +20,26 @@ namespace projectVroomVroom
     /// </summary>
     public partial class MainWindow : Window
     {
+        private MainWindow mainWindow = (MainWindow)Application.Current.MainWindow; // Get the main window
+        public enum LANGUAGE { Nederlands, Fries, Engels };
+        private LANGUAGE language = 0;
         public MainWindow()
         {
             InitializeComponent();
             this.Content = new Pages.MainMenu(); // Navigate to the main menu
             WindowState = WindowState.Maximized;
             WindowStyle = WindowStyle.None;
-            /// hoi 
+
         }
+        public LANGUAGE GetLanguage()
+        {
+            return language;
+        }
+        public void ChangeLanguage(LANGUAGE language)
+        {
+            this.language = language;
+        }
+
         ///                 Om de auto te versnellen en de snelheid te bepalen gebruik zo'n code
         ///                 if (car.Speed + car.Acceleration < car.MaxSpeed)
         ///                 car.Speed = car.Speed + car.Acceleration* groundFactor;

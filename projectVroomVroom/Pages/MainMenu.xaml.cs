@@ -26,8 +26,29 @@ namespace projectVroomVroom.Pages
         public MainMenu()
         {
             InitializeComponent();
-        }
 
+            MainWindow.LANGUAGE lang = mainWindow.GetLanguage();
+            switch (lang)
+            {
+                case MainWindow.LANGUAGE.Nederlands:
+                    ButtonStartGame.Content = "START DE GAME";
+                    ButtonScoreboard.Content = "SCOREBORD";
+                    ButtonSettings.Content = "OPTIES";
+                    break;
+
+                case MainWindow.LANGUAGE.Fries:
+                    ButtonStartGame.Content = "GAME BEGJINNE";
+                    ButtonScoreboard.Content = "SKOAREBOERD";
+                    ButtonSettings.Content = "OPSJES";
+                    break;
+
+                case MainWindow.LANGUAGE.Engels:
+                    ButtonStartGame.Content = "START GAME";
+                    ButtonScoreboard.Content = "LEADERBOARD";
+                    ButtonSettings.Content = "OPTIONS";
+                    break;
+            }
+        }
         private void StartButtonClick(object sender, RoutedEventArgs e)
         {
             mainWindow.Content = new Pages.CarSelection(); // Navigate to the CarSelection page
