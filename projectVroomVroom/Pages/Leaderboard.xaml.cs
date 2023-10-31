@@ -24,7 +24,7 @@ namespace projectVroomVroom.Pages
     {
 
         private int MapNumber = 1;
-        private int TotalMapNumber = 3;
+        private int TotalMapNumber = 2;
 
         private MainWindow mainWindow = (MainWindow)Application.Current.MainWindow; // Get the main window
 
