@@ -242,7 +242,7 @@
                     </TransformGroup>
                 </Image.RenderTransform>
             </Image>
-           
+
 
 
             <Image Source="/Images/house.png" Width="263" Height="182" Canvas.Left="137" Canvas.Top="1000"  HorizontalAlignment="Left" VerticalAlignment="Top">
@@ -293,14 +293,19 @@
                 </PathGeometry>
             </Path.Data>
         </Path>
-       
+
         <Canvas x:Name="canvas" KeyDown="OnKeyDown2" KeyUp="OnKeyUp" Focusable="True">
             <Image x:Name="Car"  Height="30"   Width="50" Source="/Images/green_f1.png" Canvas.Left="100" Canvas.Top="100" RenderTransformOrigin="0.5,0.5"  >
-            <Image.RenderTransform>
-                <RotateTransform Angle="0" />
-            </Image.RenderTransform>
-        </Image>
-            </Canvas>
+                <Image.RenderTransform>
+                    <RotateTransform Angle="0" />
+                </Image.RenderTransform>
+            </Image>
+            <Image x:Name="Car2"   KeyDown="OnKeyDown2" KeyUp="OnKeyUp" Focusable="True" Height="30"   Width="50" Source="/Images/gray_f1.png" Canvas.Left="100" Canvas.Top="182" RenderTransformOrigin="0.5,0.5"  HorizontalAlignment="Center" VerticalAlignment="Top"  >
+                <Image.RenderTransform>
+                    <RotateTransform Angle="0" />
+                </Image.RenderTransform>
+            </Image>
+        </Canvas>
 
 
 
