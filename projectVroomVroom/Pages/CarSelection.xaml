@@ -53,7 +53,7 @@
 
             <Rectangle HorizontalAlignment="Center" Height="259" Margin="0,127,0,0" Fill="#7B7B7B" Stroke="#FFB34F" VerticalAlignment="Top" Width="480" StrokeThickness="3"/>
 
-            <Image Name="Car1" Width="383" Height="145" Margin="0,184,0,0" HorizontalAlignment="Center" VerticalAlignment="Top" Source="/Images/car1.png" Stretch="Fill" />
+            <Image Name="Car1" Width="480" Height="259" Margin="0,127,0,0" HorizontalAlignment="Center" VerticalAlignment="Top" Source="/Images/car1.png" Stretch="Fill" />
 
             <Button Width="143" Height="89" Margin="-700,210,0,0" HorizontalAlignment="Center" VerticalAlignment="Top" Style="{StaticResource ArrowButtonStyle}" RenderTransformOrigin="0.5,0.5" BorderBrush="{x:Null}" Click="Player1LeftArrowButtonClick" >
                 <Button.RenderTransform>
@@ -84,7 +84,7 @@
             <TextBox MinWidth="257" MaxWidth="500" Width="Auto" Height="74" Margin="25,125,0,0" HorizontalAlignment="Left" VerticalAlignment="Center" GotFocus="RemovePlaceholder" LostFocus="AddPlaceholder" Background="#FFFFB34F" BorderBrush="Black" Text="Naam" FontSize="56" FontFamily="Raleway" FontWeight="Bold"/>
             <Rectangle HorizontalAlignment="Center" Height="259" Margin="0,0,0,127" Fill="#7B7B7B" Stroke="#FFB34F" VerticalAlignment="Bottom" Width="480" StrokeThickness="3"/>
 
-            <Image Name="Car2" Width="383" Height="145" Margin="0,0,0,180" HorizontalAlignment="Center" VerticalAlignment="Bottom" Source="/Images/car1.png" Stretch="Fill" />
+            <Image Name="Car2" Width="480" Height="259" Margin="0,694,0,0" HorizontalAlignment="Center" VerticalAlignment="Top" Source="/Images/car1.png" Stretch="Fill" />
 
             <Button Width="143" Height="89" Margin="-700,0,0,210" HorizontalAlignment="Center" VerticalAlignment="Bottom" Style="{StaticResource ArrowButtonStyle}" RenderTransformOrigin="0.5,0.5" BorderBrush="{x:Null}" Click="Player2LeftArrowButtonClick" >
                 <Button.RenderTransform>
