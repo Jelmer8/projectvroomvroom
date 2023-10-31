@@ -62,7 +62,7 @@ namespace projectVroomVroom.Pages
         private void InitializeMediaPlayer()
         {
             mediaPlayer = new MediaPlayer();
-            mediaPlayer.Open(new Uri("music.mp3", UriKind.RelativeOrAbsolute));
+            mediaPlayer.Open(new Uri("Music/music.mp3", UriKind.RelativeOrAbsolute));
             mediaPlayer.Play();
 
             

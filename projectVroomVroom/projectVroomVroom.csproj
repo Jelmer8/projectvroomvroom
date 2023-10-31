@@ -80,4 +80,10 @@
   
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="Music\music.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>
