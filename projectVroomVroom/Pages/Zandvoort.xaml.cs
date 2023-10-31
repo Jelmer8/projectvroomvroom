@@ -62,7 +62,7 @@ namespace projectVroomVroom.Pages
         private void InitializeMediaPlayer()
         {
             mediaPlayer = new MediaPlayer();
-            mediaPlayer.Open(new Uri("music.mp3", UriKind.RelativeOrAbsolute));
+            mediaPlayer.Open(new Uri("Music/music.mp3", UriKind.RelativeOrAbsolute));
             mediaPlayer.Play();
 
             
@@ -169,14 +169,32 @@ namespace projectVroomVroom.Pages
 
             
             ((RotateTransform)Car.RenderTransform).Angle = carRotationAngle;
+            CheckCollisionsWithCar();
         }
+
+        private void CheckCollisionsWithCar()
+        {
+            Image car = Car; 
+            var otherImages = canvasMain.Children.OfType<Image>().Where(img => img != car).ToList();
+
+            Rect carRect = new Rect(Canvas.GetLeft(car), Canvas.GetTop(car), car.Width, car.Height);
+
+            foreach (var img in otherImages)
+            {
+                Rect imgRect = new Rect(Canvas.GetLeft(img), Canvas.GetTop(img), img.Width, img.Height);
+                if (carRect.IntersectsWith(imgRect))
+                {
+                    carVelocityForward = 0;
+                    carVelocityBackward = 0;
+                    Console.WriteLine("Collision");
+                }
+
+            }
+            
+        }
+
     }
-
-
-
-
-
-    }
+}
 
 
 
