@@ -6,18 +6,12 @@
              xmlns:local="clr-namespace:projectVroomVroom.Pages"
              mc:Ignorable="d" d:DesignWidth="1920" d:DesignHeight="1080" Background="#FF3D9A2F">
     <Viewbox StretchDirection="Both" Stretch="Fill">
-        <Grid Margin="200,50,0,0">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="37*"/>
-                <RowDefinition Height="93*"/>
-            </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="253*"/>
-                <ColumnDefinition Width="747*"/>
-            </Grid.ColumnDefinitions>
-            <Path x:Name="interlagosBorder" Stroke="Red" StrokeThickness="30" 
-          Data="{Binding Data, ElementName=trackPath}" Grid.ColumnSpan="2" Grid.RowSpan="2" Margin="-93,0,71,70" Stretch="Fill" />
-            <Path x:Name="trackPath" Stroke="Gray" StrokeThickness="20" Grid.ColumnSpan="2" Grid.RowSpan="2" Margin="-88,5,76,75" Stretch="Fill">
+        <Canvas x:Name="canvasMain" KeyDown="OnKeyDown2" KeyUp="OnKeyUp" Focusable="True" Width="1920" Height="1080">
+
+            
+
+            <Path x:Name="interlagosBorder" Stroke="Red" StrokeThickness="30" Data="{Binding Data, ElementName=trackPath}" Width="1750" Height="800" Margin="56,150,0,0" Stretch="Fill" />
+            <Path x:Name="trackPath" Stroke="Gray" StrokeThickness="20" Width="1741" Height="791" Margin="60,154,5,5" Stretch="Fill">
                 <Path.Data>
                     <PathGeometry>
                         <PathGeometry.Figures>
@@ -55,9 +49,9 @@
                     </PathGeometry>
                 </Path.Data>
             </Path>
-            <Image Margin="10,123,207,446" Source="/Images/house2.png" Stretch="Fill" Grid.Row="1"/>
-            <Image Margin="246,185,316,519" Source="/Images/house.png" Stretch="Fill" Grid.Column="1" Grid.RowSpan="2"/>
-            <Image Margin="1335,256,49,407" Width="50" Height="110" Source="/Images/protection.png" Stretch="Fill" RenderTransformOrigin="0.5,0.5" Grid.Column="1" Grid.Row="1">
+            <Image Source="/Images/house2.png" Stretch="Fill" Grid.Row="1" Canvas.Left="165" Canvas.Top="470" Height="193" Width="195"/>
+            <Image Source="/Images/house.png" Stretch="Fill" Grid.Column="1" Grid.RowSpan="2" Canvas.Left="1130" Canvas.Top="376"/>
+            <Image Width="50" Height="110" Source="/Images/protection.png" Stretch="Fill" RenderTransformOrigin="0.5,0.5" Grid.Column="1" Grid.Row="1" Canvas.Left="1831" Canvas.Top="556">
                 <Image.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform/>
@@ -67,7 +61,7 @@
                     </TransformGroup>
                 </Image.RenderTransform>
             </Image>
-            <Image Margin="1369,319,15,344" Width="50" Height="110" Source="/Images/protection.png" Stretch="Fill" RenderTransformOrigin="0.5,0.5" Grid.Column="1" Grid.Row="1">
+            <Image Width="50" Height="110" Source="/Images/protection.png" Stretch="Fill" RenderTransformOrigin="0.5,0.5" Grid.Column="1" Grid.Row="1" Canvas.Left="1865" Canvas.Top="619">
                 <Image.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform/>
@@ -77,7 +71,7 @@
                     </TransformGroup>
                 </Image.RenderTransform>
             </Image>
-            <Image Margin="1354,379,30,284" Width="50" Height="110" Source="/Images/protection.png" Stretch="Fill" RenderTransformOrigin="0.5,0.5" Grid.Column="1" Grid.Row="1">
+            <Image Width="50" Height="110" Source="/Images/protection.png" Stretch="Fill" RenderTransformOrigin="0.5,0.5" Grid.Column="1" Grid.Row="1" Canvas.Left="1850" Canvas.Top="679">
                 <Image.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform/>
@@ -87,7 +81,7 @@
                     </TransformGroup>
                 </Image.RenderTransform>
             </Image>
-            <Image Margin="1284,399,100,264" Width="50" Height="110" Source="/Images/protection.png" Stretch="Fill" RenderTransformOrigin="0.5,0.5" Grid.Column="1" Grid.Row="1">
+            <Image Width="50" Height="110" Source="/Images/protection.png" Stretch="Fill" RenderTransformOrigin="0.5,0.5" Grid.Column="1" Grid.Row="1" Canvas.Left="1780" Canvas.Top="699">
                 <Image.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform/>
@@ -97,7 +91,7 @@
                     </TransformGroup>
                 </Image.RenderTransform>
             </Image>
-            <Image Margin="340,-13,96,210" Width="50" Height="110" Source="/Images/protection.png" Stretch="Fill" RenderTransformOrigin="0.5,0.5">
+            <Image Width="50" Height="110" Source="/Images/protection.png" Stretch="Fill" RenderTransformOrigin="0.5,0.5" Canvas.Left="479" Canvas.Top="111" HorizontalAlignment="Center" VerticalAlignment="Top">
                 <Image.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform/>
@@ -107,7 +101,7 @@
                     </TransformGroup>
                 </Image.RenderTransform>
             </Image>
-            <Image Margin="385,-71,51,268" Width="50" Height="110" Source="/Images/protection.png" Stretch="Fill" RenderTransformOrigin="0.5,0.5">
+            <Image Width="50" Height="110" Source="/Images/protection.png" Stretch="Fill" RenderTransformOrigin="0.5,0.5" Canvas.Left="524" Canvas.Top="53" HorizontalAlignment="Center" VerticalAlignment="Top">
                 <Image.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform/>
@@ -117,7 +111,7 @@
                     </TransformGroup>
                 </Image.RenderTransform>
             </Image>
-            <Image Margin="477,-76,1393,273" Width="50" Height="110" Source="/Images/protection.png" Stretch="Fill" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="2">
+            <Image Width="50" Height="110" Source="/Images/protection.png" Stretch="Fill" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="2" Canvas.Left="616" Canvas.Top="48" HorizontalAlignment="Center" VerticalAlignment="Top">
                 <Image.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform/>
@@ -127,7 +121,7 @@
                     </TransformGroup>
                 </Image.RenderTransform>
             </Image>
-            <Image Margin="-91,297,527,673" Width="50" Height="110" Source="/Images/protection.png" Stretch="Fill" RenderTransformOrigin="0.5,0.5" Grid.RowSpan="2">
+            <Image Width="50" Height="110" Source="/Images/protection.png" Stretch="Fill" RenderTransformOrigin="0.5,0.5" Grid.RowSpan="2" Canvas.Left="45" Canvas.Top="372">
                 <Image.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform/>
@@ -137,7 +131,7 @@
                     </TransformGroup>
                 </Image.RenderTransform>
             </Image>
-            <Image Margin="-54,247,490,723" Width="50" Height="110" Source="/Images/protection.png" Stretch="Fill" RenderTransformOrigin="0.5,0.5" Grid.RowSpan="2">
+            <Image Width="50" Height="110" Source="/Images/protection.png" Stretch="Fill" RenderTransformOrigin="0.5,0.5" Grid.RowSpan="2" Canvas.Left="82" Canvas.Top="322">
                 <Image.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform/>
@@ -147,7 +141,7 @@
                     </TransformGroup>
                 </Image.RenderTransform>
             </Image>
-            <Image Margin="14,233,422,737" Width="50" Height="110" Source="/Images/protection.png" Stretch="Fill" RenderTransformOrigin="0.5,0.5" Grid.RowSpan="2">
+            <Image Width="50" Height="110" Source="/Images/protection.png" Stretch="Fill" RenderTransformOrigin="0.5,0.5" Grid.RowSpan="2" Canvas.Left="150" Canvas.Top="308">
                 <Image.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform/>
@@ -157,7 +151,7 @@
                     </TransformGroup>
                 </Image.RenderTransform>
             </Image>
-            <Image Margin="82,247,354,723" Width="50" Height="110" Source="/Images/protection.png" Stretch="Fill" RenderTransformOrigin="0.5,0.5" Grid.RowSpan="2">
+            <Image Width="50" Height="110" Source="/Images/protection.png" Stretch="Fill" RenderTransformOrigin="0.5,0.5" Grid.RowSpan="2" HorizontalAlignment="Center" Canvas.Left="218" Canvas.Top="322" VerticalAlignment="Top">
                 <Image.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform/>
@@ -167,7 +161,7 @@
                     </TransformGroup>
                 </Image.RenderTransform>
             </Image>
-            <Image Margin="160,459,276,204" Width="50" Height="110" Source="/Images/protection.png" Stretch="Fill" RenderTransformOrigin="0.5,0.5" Grid.Row="1">
+            <Image Width="50" Height="110" Source="/Images/protection.png" Stretch="Fill" RenderTransformOrigin="0.5,0.5" Grid.Row="1" Canvas.Left="293" Canvas.Top="737">
                 <Image.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform/>
@@ -177,7 +171,7 @@
                     </TransformGroup>
                 </Image.RenderTransform>
             </Image>
-            <Image Margin="229,503,207,160" Width="50" Height="110" Source="/Images/protection.png" Stretch="Fill" RenderTransformOrigin="0.5,0.5" Grid.Row="1">
+            <Image Width="50" Height="110" Source="/Images/protection.png" Stretch="Fill" RenderTransformOrigin="0.5,0.5" Grid.Row="1" Canvas.Left="362" Canvas.Top="781">
                 <Image.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform/>
@@ -187,7 +181,7 @@
                     </TransformGroup>
                 </Image.RenderTransform>
             </Image>
-            <Image Margin="163,292,1221,371" Width="50" Height="110" Source="/Images/protection.png" Stretch="Fill" RenderTransformOrigin="0.5,0.5" Grid.Column="1" Grid.Row="1">
+            <Image Width="50" Height="110" Source="/Images/protection.png" Stretch="Fill" RenderTransformOrigin="0.5,0.5" Grid.Column="1" Grid.Row="1" Canvas.Left="721" Canvas.Top="598">
                 <Image.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform/>
@@ -197,7 +191,7 @@
                     </TransformGroup>
                 </Image.RenderTransform>
             </Image>
-            <Image Margin="82,281,1302,382" Width="50" Height="110" Source="/Images/protection.png" Stretch="Fill" RenderTransformOrigin="0.5,0.5" Grid.Column="1" Grid.Row="1">
+            <Image Width="50" Height="110" Source="/Images/protection.png" Stretch="Fill" RenderTransformOrigin="0.5,0.5" Grid.Column="1" Grid.Row="1" Canvas.Left="640" Canvas.Top="587">
                 <Image.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform/>
@@ -207,6 +201,16 @@
                     </TransformGroup>
                 </Image.RenderTransform>
             </Image>
-        </Grid>
+
+            <Canvas>
+                <Image x:Name="Car"  Height="30"   Width="50" Source="/Images/green_f1.png" Canvas.Left="100" Canvas.Top="100" RenderTransformOrigin="0.5,0.5"  >
+                    <Image.RenderTransform>
+                        <RotateTransform Angle="0" />
+                    </Image.RenderTransform>
+                </Image>
+            </Canvas>
+
+
+        </Canvas>
     </Viewbox>
 </UserControl>
