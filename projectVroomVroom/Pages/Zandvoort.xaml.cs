@@ -56,7 +56,33 @@ namespace projectVroomVroom.Pages
             gameLoopTimer.Tick += GameLoop;
             gameLoopTimer.Start();
 
-     }
+            MainWindow.LANGUAGE lang = mainWindow.GetLanguage();
+            switch (lang)
+            {
+                case MainWindow.LANGUAGE.Nederlands:
+                    ButtonMenuResume.Content = "DOORGAAN";
+                    ButtonMenuOptions.Content = "OPTIES";
+                    ButtonMenuGoMain.Content = "MENU";
+                    ButtonOptionsBack.Content = "TERUG";
+
+                    break;
+
+                case MainWindow.LANGUAGE.Fries:
+                    ButtonMenuResume.Content = "TROCHGEAN";
+                    ButtonMenuOptions.Content = "OPSJES";
+                    ButtonMenuGoMain.Content = "MENU";
+                    ButtonOptionsBack.Content = "WEROM";
+                    break;
+
+                case MainWindow.LANGUAGE.Engels:
+                    ButtonMenuResume.Content = "CONTINUE";
+                    ButtonMenuOptions.Content = "OPTIONS";
+                    ButtonMenuGoMain.Content = "MENU";
+                    ButtonOptionsBack.Content = "BACK";
+                    break;
+            }
+
+        }
 
         
 
