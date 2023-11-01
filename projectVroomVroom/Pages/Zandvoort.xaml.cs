@@ -9,6 +9,8 @@ using System.Windows.Media;
 using System.Windows.Shapes;
 using System.Windows.Threading;
 
+
+
 namespace projectVroomVroom.Pages
 {
 
@@ -156,59 +158,6 @@ namespace projectVroomVroom.Pages
             }
         }
 
-        private void GameLoop(object sender, EventArgs e)
-        {
-
-            
-            if (isTurningLeft)
-            {
-                carRotationAngle -= 5; 
-            }
-            if (isTurningRight)
-            {
-                carRotationAngle += 5; 
-            }
-
-            
-            double carAcceleration = 0.1; 
-            if (isAccelerating)
-            {
-                carVelocityForward += carAcceleration;
-            }
-            else if (isReversing)
-            {
-                carVelocityBackward += carAcceleration;
-            }
-            else
-            {
-                
-                carVelocityForward *= 0.95;
-                carVelocityBackward *= 0.95;
-            }
-
-            
-            double maxVelocity = 5.0; 
-            carVelocityForward = Math.Min(maxVelocity, carVelocityForward);
-            carVelocityBackward = Math.Min(maxVelocity, carVelocityBackward);
-
-            
-            double totalVelocity = carVelocityForward - carVelocityBackward;
-
-            
-            double carRotationRadians = carRotationAngle * Math.PI / 180;
-
-            
-            carX += totalVelocity * Math.Cos(carRotationRadians);
-            carY += totalVelocity * Math.Sin(carRotationRadians);
-
-            
-            Canvas.SetLeft(Car, carX);
-            Canvas.SetTop(Car, carY);
-
-            
-            ((RotateTransform)Car.RenderTransform).Angle = carRotationAngle;
-        }
-
         private void MainMenuButton(object sender, RoutedEventArgs e)
         {
             mainWindow.Content = new Pages.MainMenu(); // Navigate back to the main menu
@@ -222,7 +171,12 @@ namespace projectVroomVroom.Pages
             ButtonOptionsBack.Visibility = Visibility.Visible;
             CheckboxSoundToggle.Visibility = Visibility.Visible;
             CheckboxMusictoggle.Visibility = Visibility.Visible;
-            if (SoundMuted)
+        }
+
+            private void GameLoop(object sender, EventArgs e)
+        {
+            CheckCollisionsWithCar();
+            if (isTurningLeft)
             {
                 carRotationAngle -= 5;
             }
@@ -271,6 +225,61 @@ namespace projectVroomVroom.Pages
             ((RotateTransform)Car.RenderTransform).Angle = carRotationAngle;
             
         }
+        private void MusicCheckboxHandleChecked(object sender, RoutedEventArgs e)
+        {
+            MusicImage.Visibility = Visibility.Hidden;
+            MuteMusicImage.Visibility = Visibility.Visible;
+            MusicMuted = true;
+            InitializeMediaPlayer();
+        }
+
+        private void MusicCheckboxHandleUnchecked(object sender, RoutedEventArgs e)
+        {
+            MusicImage.Visibility = Visibility.Visible;
+            MuteMusicImage.Visibility = Visibility.Hidden;
+            MusicMuted = false;
+            InitializeMediaPlayer();
+        }
+
+        private void SoundCheckboxHandleChecked(object sender, RoutedEventArgs e)
+        {
+            SoundImage.Visibility = Visibility.Hidden;
+            MuteSoundImage.Visibility = Visibility.Visible;
+            SoundMuted = true;
+        }
+
+        private void SoundCheckboxHandleUnchecked(object sender, RoutedEventArgs e)
+        {
+            SoundImage.Visibility = Visibility.Visible;
+            MuteSoundImage.Visibility = Visibility.Hidden;
+            SoundMuted = false;
+        }
+
+        private void OptionsBackButton(object sender, RoutedEventArgs e)
+        {
+            Menu.Visibility = Visibility.Visible;
+            ButtonMenuGoMain.Visibility = Visibility.Visible;
+            ButtonMenuOptions.Visibility = Visibility.Visible;
+            ButtonMenuResume.Visibility = Visibility.Visible;
+            ButtonOptionsBack.Visibility = Visibility.Hidden;
+            CheckboxSoundToggle.Visibility = Visibility.Hidden;
+            CheckboxMusictoggle.Visibility = Visibility.Hidden;
+            SoundImage.Visibility = Visibility.Hidden;
+            MuteSoundImage.Visibility = Visibility.Hidden;
+            MusicImage.Visibility = Visibility.Hidden;
+            MuteMusicImage.Visibility = Visibility.Hidden;
+        }
+
+        private void MenuResumeButton(object sender, RoutedEventArgs e)
+        {
+            Menu.Visibility = Visibility.Hidden;
+            ButtonMenuGoMain.Visibility = Visibility.Hidden;
+            ButtonMenuOptions.Visibility = Visibility.Hidden;
+            ButtonMenuResume.Visibility = Visibility.Hidden;
+            MenuImage.Visibility = Visibility.Hidden;
+            MenuLabel.Visibility = Visibility.Hidden;
+            VisibleCheck = false;
+        }
 
         private void CheckCollisionsWithCar()
         {
@@ -282,13 +291,7 @@ namespace projectVroomVroom.Pages
             foreach (Rectangle x in collision)
             {
 
-        private void MusicCheckboxHandleChecked(object sender, RoutedEventArgs e)
-        {
-            MusicImage.Visibility = Visibility.Hidden;
-            MuteMusicImage.Visibility = Visibility.Visible;
-            MusicMuted = true;
-            InitializeMediaPlayer();
-        }
+
                 Rect imgRect = new Rect(Canvas.GetLeft(x), Canvas.GetTop(x), x.Width, x.Height);
                 if (carRect.IntersectsWith(imgRect))
                 {
@@ -296,14 +299,6 @@ namespace projectVroomVroom.Pages
                     carVelocityForward = 0;
                     
                 }
-
-        private void MusicCheckboxHandleUnchecked(object sender, RoutedEventArgs e)
-        {
-            MusicImage.Visibility = Visibility.Visible;
-            MuteMusicImage.Visibility = Visibility.Hidden;
-            MusicMuted = false;
-            InitializeMediaPlayer();
-        }
             }
 
             var speed = trackRectanglePath.Children.OfType<Rectangle>().ToList();

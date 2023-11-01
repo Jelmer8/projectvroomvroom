@@ -79,9 +79,6 @@
   <Resource Include="Images\gray_f1.png" />
 <Resource Include="Images\finishline.png" />
   
-  <Resource Include="Images\green_f1.png" />
-  <Resource Include="Images\gray_f1.png" />
-  
   </ItemGroup>
 
   <ItemGroup>
