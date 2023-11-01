@@ -36,6 +36,7 @@ namespace projectVroomVroom.Pages
         private Boolean KeyIsDown = false;
         public double Wheelangle = 0;
         public double rounds = 0;
+        public double checkpointDone = 0;
 
         public Zandvoort()
         {
@@ -319,14 +320,28 @@ namespace projectVroomVroom.Pages
                 }
             }
 
+            var checkpointset = checkpoint.Children.OfType<Rectangle>().ToList();
+
+            foreach (Rectangle c in checkpointset) {
+                Rect checkpointSetted = new Rect(Canvas.GetLeft(c), Canvas.GetTop(c), c.Width, c.Height);
+                if (carRect.IntersectsWith(checkpointSetted)) {
+                    checkpointDone = 1;
+                }
+            }
+
+
             var finish = CanvasFinishline.Children.OfType<Rectangle>().ToList();
 
             foreach (Rectangle b in finish) {
                 Rect finito = new Rect(Canvas.GetLeft(b), Canvas.GetTop(b), b.Width, b.Height);
                 if (carRect.IntersectsWith(finito)) {
-                    rounds += 1;
-                    if (rounds >= 3) {
-                        Environment.Exit(1);
+                    if (checkpointDone == 1) {
+                        rounds += 1;
+                        checkpointDone = 0;
+                        if (rounds >= 3)
+                        {
+                            Environment.Exit(1);
+                        }
                     }
                 }
             }
