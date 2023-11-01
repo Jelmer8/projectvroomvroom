@@ -404,6 +404,7 @@
             </Path>
 
             <Canvas x:Name="CanvasFinishline">
+                <Rectangle x:Name="finishLine" Width="45" Height="12" Canvas.Left="269" Canvas.Top="457" HorizontalAlignment="Center" VerticalAlignment="Top"/>
                 <Image Source="/Images/finishline.png" Height="55"  Width="46" Canvas.Top="489" Canvas.Left="304"  >
                     <Image.RenderTransform>
                         <TransformGroup>

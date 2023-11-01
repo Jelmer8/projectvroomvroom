@@ -35,6 +35,7 @@ namespace projectVroomVroom.Pages
         private Boolean MusicMuted = false;
         private Boolean KeyIsDown = false;
         public double Wheelangle = 0;
+        public double rounds = 0;
 
         public Zandvoort()
         {
@@ -315,6 +316,18 @@ namespace projectVroomVroom.Pages
                 else {
                     carAcceleration = 0.015;
                     maxVelocity = 1;
+                }
+            }
+
+            var finish = CanvasFinishline.Children.OfType<Rectangle>().ToList();
+
+            foreach (Rectangle b in finish) {
+                Rect finito = new Rect(Canvas.GetLeft(b), Canvas.GetTop(b), b.Width, b.Height);
+                if (carRect.IntersectsWith(finito)) {
+                    rounds += 1;
+                    if (rounds >= 3) {
+                        Environment.Exit(1);
+                    }
                 }
             }
         }
