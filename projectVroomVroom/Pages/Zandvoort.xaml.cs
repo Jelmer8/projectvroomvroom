@@ -177,7 +177,7 @@ namespace projectVroomVroom.Pages
                 {
 
                     carVelocityForward = 0;
-                    carVelocityBackward = 0;
+                    
                 }
 
             }
