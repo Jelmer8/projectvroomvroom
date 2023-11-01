@@ -416,7 +416,9 @@
                     </Image.RenderTransform>
                 </Image>
             </Canvas>
-
+            <Canvas x:Name="checkpoint">
+                <Rectangle x:Name="checkpoints" Width="44" Height="12" Canvas.Left="1555" Canvas.Top="609" HorizontalAlignment="Left" VerticalAlignment="Center"/>
+            </Canvas>
             <Canvas x:Name="canvas" KeyDown="OnKeyDown2" KeyUp="OnKeyUp" Focusable="True">
                 <Canvas x:Name="CanvasMenu" Height="500" Width="350" Canvas.Left="640" Canvas.Top="184">
                     <Rectangle
