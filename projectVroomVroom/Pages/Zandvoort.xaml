@@ -242,7 +242,7 @@
                     </TransformGroup>
                 </Image.RenderTransform>
             </Image>
-           
+
 
 
             <Image Source="/Images/house.png" Width="263" Height="182" Canvas.Left="137" Canvas.Top="1000"  HorizontalAlignment="Left" VerticalAlignment="Top">
@@ -254,8 +254,8 @@
                         <TranslateTransform/>
                     </TransformGroup>
                 </Image.RenderTransform>
-
             </Image>
+
         </Canvas>
         <Path x:Name="borderPath" Stroke="Red" StrokeThickness="45" 
           Data="{Binding Data, ElementName=trackPath}" />
@@ -293,14 +293,63 @@
                 </PathGeometry>
             </Path.Data>
         </Path>
-       
+
+        <Canvas x:Name="CanvasFinishline">
+            <Image Source="/Images/finishline.png" Height="55"  Width="46" Canvas.Top="489" Canvas.Left="304"  >
+                <Image.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="-154.246"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Image.RenderTransform>
+            </Image>
+        </Canvas>
+
         <Canvas x:Name="canvas" KeyDown="OnKeyDown2" KeyUp="OnKeyUp" Focusable="True">
-            <Image x:Name="Car"  Height="30"   Width="50" Source="/Images/green_f1.png" Canvas.Left="100" Canvas.Top="100" RenderTransformOrigin="0.5,0.5"  >
-            <Image.RenderTransform>
-                <RotateTransform Angle="0" />
-            </Image.RenderTransform>
-        </Image>
+            <Canvas x:Name="CanvasMenu" Height="500" Width="350" Canvas.Left="640" Canvas.Top="184">
+                <Rectangle
+                x:Name="Menu"
+                Fill="#646464"
+                Stroke="Black"
+                StrokeThickness="3"
+                Height="500"
+                Width="350"
+                HorizontalAlignment="Left"
+                Canvas.Left="0"
+                Canvas.Top="0"
+                Visibility="Hidden"
+                 />
+
+                <Image x:Name="MenuImage" HorizontalAlignment="Center" Source="/Images/background_title.png" Height="100" VerticalAlignment="Top" Width="350" Canvas.Left="0" Canvas.Top="40" Visibility="Hidden"/>
+                <Image x:Name="MuteMusicImage"  Source="/Images/mute_music_icon.png" Height="100" VerticalAlignment="Top" Width="100" Canvas.Left="10" Canvas.Top="240" Visibility="Hidden"/>
+                <Image x:Name="MusicImage"  Source="/Images/music_icon.png" Height="100" VerticalAlignment="Top" Width="100" Canvas.Left="10" Canvas.Top="240" Visibility="Hidden"/>
+                <Image x:Name="MuteSoundImage"  Source="/Images/mute_icon.png" Height="100" VerticalAlignment="Top" Width="100" Canvas.Left="10" Canvas.Top="130" Visibility="Hidden"/>
+                <Image x:Name="SoundImage"  Source="/Images/sound_icon.png" Height="100" VerticalAlignment="Top" Width="100" Canvas.Left="10" Canvas.Top="130" Visibility="Hidden"/>
+                <Label x:Name="MenuLabel" Content="Vroom Vroom" Foreground="#FFFFFF"  HorizontalAlignment="Center" Canvas.Left="63" Canvas.Top="34" VerticalAlignment="Top" Height="105" Width="500" FontSize="35" FontFamily="{StaticResource Pacifico}" Visibility="Hidden"/>
+                <Button x:Name="ButtonMenuResume" Width="290" Height="75" HorizontalAlignment="Left" VerticalAlignment="Bottom" Canvas.Left="29" Canvas.Bottom="245" Background="#B1B1B1" BorderBrush="Black" Content="DOORGAAN" FontSize="48" FontFamily="Raleway" FontWeight="Bold" BorderThickness="2,2,2,2" Click="MenuResumeButton" Visibility="Hidden"/>
+                <Button x:Name="ButtonMenuOptions" Width="290" Height="75" HorizontalAlignment="Left" VerticalAlignment="Bottom" Canvas.Left="29" Canvas.Bottom= "145" Background="#B1B1B1" BorderBrush="Black" Content="OPTIES" FontSize="48" FontFamily="Raleway" FontWeight="Bold" BorderThickness="2,2,2,2" Click="MenuOptionsButton" Visibility="Hidden"/>
+                <CheckBox x:Name="CheckboxSoundToggle" Canvas.Left="160" Canvas.Top="170" Checked="SoundCheckboxHandleChecked" Unchecked="SoundCheckboxHandleUnchecked" Visibility="Hidden">
+                    <CheckBox.LayoutTransform>
+                        <ScaleTransform ScaleX="2" ScaleY="2" />
+                    </CheckBox.LayoutTransform>
+                </CheckBox>
+                <CheckBox x:Name="CheckboxMusictoggle" Canvas.Left="160" Canvas.Top="275" Checked="MusicCheckboxHandleChecked" Unchecked="MusicCheckboxHandleUnchecked" Visibility="Hidden">
+                    <CheckBox.LayoutTransform>
+                        <ScaleTransform ScaleX="2" ScaleY="2" />
+                    </CheckBox.LayoutTransform>
+                </CheckBox>
+                <Button x:Name="ButtonMenuGoMain" Width="290" Height="75" HorizontalAlignment="Left" VerticalAlignment="Bottom" Canvas.Left="29" Canvas.Bottom="45" Background="#B1B1B1" BorderBrush="Black" Content="MENU" FontSize="48" FontFamily="Raleway" FontWeight="Bold" BorderThickness="2,2,2,2" Click="MainMenuButton" Visibility="Hidden"/>
+                <Button x:Name="ButtonOptionsBack" Width="290" Height="75" HorizontalAlignment="Left" VerticalAlignment="Bottom" Canvas.Left="29" Canvas.Bottom="45" Background="#B1B1B1" BorderBrush="Black" Content="TERUG" FontSize="48" FontFamily="Raleway" FontWeight="Bold" BorderThickness="2,2,2,2" Click="OptionsBackButton" Visibility="Hidden"/>
             </Canvas>
+            
+            <Image x:Name="Car"  Height="30"   Width="50" Source="/Images/green_f1.png" Canvas.Left="100" Canvas.Top="100" RenderTransformOrigin="2.05,1.007"  >
+                <Image.RenderTransform>
+                    <RotateTransform Angle="0" />
+                </Image.RenderTransform>
+            </Image>
+        </Canvas>
 
 
 

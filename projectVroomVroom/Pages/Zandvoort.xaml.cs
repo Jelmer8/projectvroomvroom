@@ -40,12 +40,14 @@ namespace projectVroomVroom.Pages
         private Boolean VisibleCheck = false;
         private Boolean SoundMuted = false;
         private Boolean MusicMuted = false;
+        private Boolean KeyIsDown = false;
         public double Wheelangle = 0;
 
         public Zandvoort()
         {
+
             InitializeComponent();
-            InitializeMediaPlayer();
+            //InitializeMediaPlayer();
             canvas.Focus();
             this.KeyDown += OnKeyDown2;
             this.KeyUp += OnKeyUp;
@@ -53,9 +55,8 @@ namespace projectVroomVroom.Pages
             gameLoopTimer.Interval = TimeSpan.FromMilliseconds(16); 
             gameLoopTimer.Tick += GameLoop;
             gameLoopTimer.Start();
-            
 
-        }
+     }
 
         
 
@@ -80,26 +81,64 @@ namespace projectVroomVroom.Pages
 
         private void OnKeyDown2(object sender, KeyEventArgs e)
         {
-            if (e.Key == Key.Left)
+            if (!KeyIsDown)
             {
-                isTurningLeft = true;
-            }
-            else if (e.Key == Key.Right)
-            {
-                isTurningRight = true;
-            }
-            else if (e.Key == Key.Up)
-            {
-                isAccelerating = true;
-            }
-            else if (e.Key == Key.Down)
-            {
-                isReversing = true;
+                KeyIsDown = true;
+                
+                if (e.Key == Key.Left)
+                {
+                    isTurningLeft = true;
+                }
+                else if (e.Key == Key.Right)
+                {
+                    isTurningRight = true;
+                }
+                else if (e.Key == Key.Up)
+                {
+                    isAccelerating = true;
+                }
+                else if (e.Key == Key.Down)
+                {
+                    isReversing = true;
+                }
+
+                if (e.Key == Key.Escape)
+                {
+                    if (!VisibleCheck)
+                    {
+                        Menu.Visibility = Visibility.Visible;
+                        ButtonMenuGoMain.Visibility = Visibility.Visible;
+                        ButtonMenuOptions.Visibility = Visibility.Visible;
+                        ButtonMenuResume.Visibility = Visibility.Visible;
+                        MenuImage.Visibility = Visibility.Visible;
+                        MenuLabel.Visibility = Visibility.Visible;
+                        ButtonOptionsBack.Visibility = Visibility.Hidden;
+                        VisibleCheck = true;
+                    }
+                    else
+                    {
+                        Menu.Visibility = Visibility.Hidden;
+                        ButtonMenuGoMain.Visibility = Visibility.Hidden;
+                        ButtonMenuOptions.Visibility = Visibility.Hidden;
+                        ButtonMenuResume.Visibility = Visibility.Hidden;
+                        MenuImage.Visibility = Visibility.Hidden;
+                        MenuLabel.Visibility = Visibility.Hidden;
+                        ButtonOptionsBack.Visibility = Visibility.Hidden;
+                        CheckboxSoundToggle.Visibility = Visibility.Hidden;
+                        CheckboxMusictoggle.Visibility = Visibility.Hidden;
+                        SoundImage.Visibility = Visibility.Hidden;
+                        MuteSoundImage.Visibility = Visibility.Hidden;
+                        MusicImage.Visibility = Visibility.Hidden;
+                        MuteMusicImage.Visibility = Visibility.Hidden;
+                        VisibleCheck = false;
+                    }
+                }
             }
 
         }
         private void OnKeyUp(object sender, KeyEventArgs e)
         {
+            KeyIsDown = false;
             if (e.Key == Key.Left)
             {
                 isTurningLeft = false;
@@ -170,6 +209,97 @@ namespace projectVroomVroom.Pages
             
             ((RotateTransform)Car.RenderTransform).Angle = carRotationAngle;
         }
+
+        private void MainMenuButton(object sender, RoutedEventArgs e)
+        {
+            mainWindow.Content = new Pages.MainMenu(); // Navigate back to the main menu
+            mainWindow.Content = new Pages.MainMenu();
+        }
+        private void MenuOptionsButton(object sender, RoutedEventArgs e)
+        {
+            ButtonMenuGoMain.Visibility = Visibility.Hidden;
+            ButtonMenuOptions.Visibility = Visibility.Hidden;
+            ButtonMenuResume.Visibility = Visibility.Hidden;
+            ButtonOptionsBack.Visibility = Visibility.Visible;
+            CheckboxSoundToggle.Visibility = Visibility.Visible;
+            CheckboxMusictoggle.Visibility = Visibility.Visible;
+            if (SoundMuted)
+            {
+                SoundImage.Visibility = Visibility.Hidden;
+                MuteSoundImage.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                SoundImage.Visibility = Visibility.Visible;
+                MuteSoundImage.Visibility = Visibility.Hidden;
+            }
+
+            if (MusicMuted)
+            {
+                MusicImage.Visibility = Visibility.Hidden;
+                MuteMusicImage.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                MusicImage.Visibility = Visibility.Visible;
+                MuteMusicImage.Visibility = Visibility.Hidden;
+            }
+        }
+
+        private void OptionsBackButton(object sender, RoutedEventArgs e)
+        {
+            Menu.Visibility = Visibility.Visible;
+            ButtonMenuGoMain.Visibility = Visibility.Visible;
+            ButtonMenuOptions.Visibility = Visibility.Visible;
+            ButtonMenuResume.Visibility = Visibility.Visible;
+            ButtonOptionsBack.Visibility = Visibility.Hidden;
+            CheckboxSoundToggle.Visibility = Visibility.Hidden;
+            CheckboxMusictoggle.Visibility = Visibility.Hidden;
+            SoundImage.Visibility = Visibility.Hidden;
+            MuteSoundImage.Visibility = Visibility.Hidden;
+            MusicImage.Visibility = Visibility.Hidden;
+            MuteMusicImage.Visibility = Visibility.Hidden;
+        }
+
+        private void SoundCheckboxHandleChecked(object sender, RoutedEventArgs e)
+        {
+            SoundImage.Visibility = Visibility.Hidden;
+            MuteSoundImage.Visibility = Visibility.Visible;
+            SoundMuted = true;
+        }
+
+        private void SoundCheckboxHandleUnchecked(object sender, RoutedEventArgs e)
+        {
+            SoundImage.Visibility = Visibility.Visible;
+            MuteSoundImage.Visibility = Visibility.Hidden;
+            SoundMuted = false;
+        }
+
+        private void MusicCheckboxHandleChecked(object sender, RoutedEventArgs e)
+        {
+            MusicImage.Visibility = Visibility.Hidden;
+            MuteMusicImage.Visibility = Visibility.Visible;
+            MusicMuted = true;
+        }
+
+        private void MusicCheckboxHandleUnchecked(object sender, RoutedEventArgs e)
+        {
+            MusicImage.Visibility = Visibility.Visible;
+            MuteMusicImage.Visibility = Visibility.Hidden;
+            MusicMuted = false;
+        }
+
+        private void MenuResumeButton(object sender, RoutedEventArgs e)
+        {
+            Menu.Visibility = Visibility.Hidden;
+            ButtonMenuGoMain.Visibility = Visibility.Hidden;
+            ButtonMenuOptions.Visibility = Visibility.Hidden;
+            ButtonMenuResume.Visibility = Visibility.Hidden;
+            MenuImage.Visibility = Visibility.Hidden;
+            MenuLabel.Visibility = Visibility.Hidden;
+            VisibleCheck = false;
+        }
+
     }
 
 
