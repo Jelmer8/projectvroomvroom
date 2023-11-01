@@ -138,6 +138,8 @@
                     <Rectangle Fill="#FF3D9A2F" Width="4" Height="17" Canvas.Left="311" Canvas.Top="489" HorizontalAlignment="Left" VerticalAlignment="Center" />
                     <Rectangle Fill="#FF3D9A2F" Width="20" Height="262" Canvas.Left="-1" Canvas.Top="940" />
                     <Rectangle Fill="#FF3D9A2F" Width="368" Height="27" Canvas.Left="-5" Canvas.Top="1175" />
+                    <Rectangle Fill="#FF3D9A2F" Width="111" Height="107" Canvas.Left="230" Canvas.Top="797" HorizontalAlignment="Center" VerticalAlignment="Top" />
+                    <Rectangle Fill="#FF3D9A2F" Width="105" Height="80" Canvas.Left="166" Canvas.Top="909" HorizontalAlignment="Left" VerticalAlignment="Center" />
                 </Canvas>
                 <Image Source="/Images/protection.png" Width="28" Height="57" Canvas.Top="1150" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="-6"/>
                 <Image Source="/Images/protection.png" Width="28" Height="57" Canvas.Top="1120" HorizontalAlignment="Left" VerticalAlignment="Top" Canvas.Left="-6"/>
