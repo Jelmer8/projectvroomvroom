@@ -47,7 +47,7 @@ namespace projectVroomVroom.Pages
         {
 
             InitializeComponent();
-            //InitializeMediaPlayer();
+            InitializeMediaPlayer();
             canvas.Focus();
             this.KeyDown += OnKeyDown2;
             this.KeyUp += OnKeyUp;
@@ -62,12 +62,20 @@ namespace projectVroomVroom.Pages
 
         private void InitializeMediaPlayer()
         {
-            mediaPlayer = new MediaPlayer();
-            mediaPlayer.Open(new Uri("music.mp3", UriKind.RelativeOrAbsolute));
-            mediaPlayer.Play();
+
+            if (!MusicMuted)
+            {
+                mediaPlayer = new MediaPlayer();
+                mediaPlayer.Open(new Uri("music.mp3", UriKind.RelativeOrAbsolute));
+                mediaPlayer.Play();
+                mediaPlayer.MediaEnded += MediaPlayer_MediaEnded;
+            }
+            else
+            {
+                mediaPlayer.Stop();
+            }
 
             
-            mediaPlayer.MediaEnded += MediaPlayer_MediaEnded;
         }
 
         private void MediaPlayer_MediaEnded(object sender, EventArgs e)
@@ -80,11 +88,7 @@ namespace projectVroomVroom.Pages
 
 
         private void OnKeyDown2(object sender, KeyEventArgs e)
-        {
-            if (!KeyIsDown)
-            {
-                KeyIsDown = true;
-                
+        {                
                 if (e.Key == Key.Left)
                 {
                     isTurningLeft = true;
@@ -101,6 +105,10 @@ namespace projectVroomVroom.Pages
                 {
                     isReversing = true;
                 }
+
+                if (!KeyIsDown)
+                {
+                    KeyIsDown = true;
 
                 if (e.Key == Key.Escape)
                 {
@@ -280,6 +288,7 @@ namespace projectVroomVroom.Pages
             MusicImage.Visibility = Visibility.Hidden;
             MuteMusicImage.Visibility = Visibility.Visible;
             MusicMuted = true;
+            InitializeMediaPlayer();
         }
 
         private void MusicCheckboxHandleUnchecked(object sender, RoutedEventArgs e)
@@ -287,6 +296,7 @@ namespace projectVroomVroom.Pages
             MusicImage.Visibility = Visibility.Visible;
             MuteMusicImage.Visibility = Visibility.Hidden;
             MusicMuted = false;
+            InitializeMediaPlayer();
         }
 
         private void MenuResumeButton(object sender, RoutedEventArgs e)
