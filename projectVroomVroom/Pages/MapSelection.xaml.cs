@@ -27,6 +27,23 @@ namespace projectVroomVroom.Pages
         public MapSelection()
         {
             InitializeComponent();
+
+            MainWindow.LANGUAGE lang = mainWindow.GetLanguage();
+            switch (lang)
+            {
+                case MainWindow.LANGUAGE.Nederlands:
+                    ButtonGoBack.Content = "TERUG";
+
+                    break;
+
+                case MainWindow.LANGUAGE.Fries:
+                    ButtonGoBack.Content = "WEROM";
+                    break;
+
+                case MainWindow.LANGUAGE.Engels:
+                    ButtonGoBack.Content = "BACK";
+                    break;
+            }
         }
 
         private void Zandvoort_MouseDown(object sender, MouseEventArgs e) 

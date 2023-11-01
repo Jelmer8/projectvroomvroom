@@ -34,6 +34,34 @@ namespace projectVroomVroom.Pages
         public CarSelection()
         {
             InitializeComponent();
+
+            MainWindow.LANGUAGE lang = mainWindow.GetLanguage();
+            switch (lang)
+            {
+                case MainWindow.LANGUAGE.Nederlands:
+                    TextboxPlayer1.Text = "Naam";
+                    TextboxPlayer2.Text = "Naam";
+                    ReadyButton1.Content = "KLAAR";
+                    ReadyButton2.Content = "KLAAR";
+                    ButtonGoBack.Content = "TERUG";
+                    break;
+
+                case MainWindow.LANGUAGE.Fries:
+                    TextboxPlayer1.Text = "Namme";
+                    TextboxPlayer2.Text = "Namme";
+                    ReadyButton1.Content = "KLEAR";
+                    ReadyButton2.Content = "KLEAR";
+                    ButtonGoBack.Content = "WEROM";
+                    break;
+
+                case MainWindow.LANGUAGE.Engels:
+                    TextboxPlayer1.Text = "Name";
+                    TextboxPlayer2.Text = "Name";
+                    ReadyButton1.Content = "READY";
+                    ReadyButton2.Content = "READY";
+                    ButtonGoBack.Content = "BACK";
+                    break;
+            }
         }
 
         private void CheckIfBothPlayersReady()

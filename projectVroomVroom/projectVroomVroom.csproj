@@ -19,7 +19,6 @@
 	<None Remove="Images\Minimalist_info_Icon.png" />
 	<None Remove="Images\map1.png" />
 	<None Remove="Images\map2.png" />
-    <None Remove="Images\map3.png" />
 	<None Remove="Images\arrows_keybind.png" />
 	<None Remove="Images\wasd_keybinds.png" />
 	<None Remove="Images\keyboard_keybinds.png" />
@@ -28,14 +27,14 @@
   <None Remove="Images\interlagos.jpg" />
     <None Remove="Images\house.png" />
     <None Remove="Images\protection.png" />
-    
 	<None Remove="Images\mute_icon.png" />
 	<None Remove="Images\sound_icon.png" />
 	<None Remove="Images\music_icon.png" />
 	<None Remove="Images\mute_music_icon.png" />
   	<None Remove="Images\green_f1.png" />
   	<None Remove="Images\gray_f1.png" />
-  
+	<None Remove="Images\finishline.png" />
+	 
   </ItemGroup>
 
   <ItemGroup>
@@ -64,7 +63,6 @@
 	<Resource Include="Images\Minimalist_info_Icon.png" />
 	<Resource Include="Images\map1.png" />
 	<Resource Include="Images\map2.png" />
-    <Resource Include="Images\map3.png" />
 	<Resource Include="Images\arrows_keybind.png" />
 	<Resource Include="Images\wasd_keybinds.png" />
 	<Resource Include="Images\keyboard_keybinds.png" />
@@ -77,6 +75,10 @@
 	<Resource Include="Images\sound_icon.png" />
 	<Resource Include="Images\music_icon.png" />
 	<Resource Include="Images\mute_music_icon.png" />
+  <Resource Include="Images\green_f1.png" />
+  <Resource Include="Images\gray_f1.png" />
+<Resource Include="Images\finishline.png" />
+  
   <Resource Include="Images\green_f1.png" />
   <Resource Include="Images\gray_f1.png" />
   
