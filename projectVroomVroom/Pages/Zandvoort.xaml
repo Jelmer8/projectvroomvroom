@@ -131,10 +131,10 @@
                 <Rectangle Fill="#FF3D9A2F" Width="28" Height="55" Canvas.Left="389" Canvas.Top="1" />
                 <Rectangle Fill="#FF3D9A2F" Width="41" Height="16" Canvas.Left="403" Canvas.Top="15" />
                 <Rectangle Fill="#FF3D9A2F" Width="42" Height="16" Canvas.Left="382" Canvas.Top="23" />
-                <Rectangle Fill="#FF3D9A2F" Width="14" Height="35" Canvas.Left="282" Canvas.Top="534" HorizontalAlignment="Left" VerticalAlignment="Center" />
-                <Rectangle Fill="#FF3D9A2F" Width="19" Height="18" Canvas.Left="287" Canvas.Top="524" HorizontalAlignment="Left" VerticalAlignment="Center" />
-                <Rectangle Fill="#FF3D9A2F" Width="12" Height="18" Canvas.Left="294" Canvas.Top="506" HorizontalAlignment="Left" VerticalAlignment="Center" />
-                <Rectangle Fill="#FF3D9A2F" Width="11" Height="17" Canvas.Left="306" Canvas.Top="489" HorizontalAlignment="Left" VerticalAlignment="Center" />
+                <Rectangle Fill="#FF3D9A2F" Width="9" Height="19" Canvas.Left="287" Canvas.Top="550" HorizontalAlignment="Left" VerticalAlignment="Center" />
+                <Rectangle Fill="#FF3D9A2F" Width="10" Height="18" Canvas.Left="296" Canvas.Top="524" HorizontalAlignment="Left" VerticalAlignment="Center" />
+                <Rectangle Fill="#FF3D9A2F" Width="5" Height="18" Canvas.Left="301" Canvas.Top="506" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                <Rectangle Fill="#FF3D9A2F" Width="2" Height="12" Canvas.Left="311" Canvas.Top="494" HorizontalAlignment="Left" VerticalAlignment="Center" />
                 <Rectangle Fill="#FF3D9A2F" Width="20" Height="262" Canvas.Left="-1" Canvas.Top="940" />
                 <Rectangle Fill="#FF3D9A2F" Width="368" Height="27" Canvas.Left="-5" Canvas.Top="1175" />
             </Canvas>
