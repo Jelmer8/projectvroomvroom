@@ -22,7 +22,8 @@ namespace projectVroomVroom.Pages
         private double carVelocityBackward = 0;
         private bool isAccelerating = false;
         private bool isReversing = false;
-
+        private double maxVelocity = 3.0;
+        double carAcceleration = 0.03;
 
         private MainWindow mainWindow = (MainWindow)Application.Current.MainWindow;
         private Boolean VisibleCheck = false;
@@ -109,7 +110,7 @@ namespace projectVroomVroom.Pages
         private void GameLoop(object sender, EventArgs e)
         {
 
-
+            CheckCollisionsWithCar();
             if (isTurningLeft)
             {
                 carRotationAngle -= 5;
@@ -120,7 +121,7 @@ namespace projectVroomVroom.Pages
             }
 
 
-            double carAcceleration = 0.1;
+            
             if (isAccelerating)
             {
                 carVelocityForward += carAcceleration;
@@ -137,7 +138,7 @@ namespace projectVroomVroom.Pages
             }
 
 
-            double maxVelocity = 5.0;
+            
             carVelocityForward = Math.Min(maxVelocity, carVelocityForward);
             carVelocityBackward = Math.Min(maxVelocity, carVelocityBackward);
 
@@ -157,7 +158,7 @@ namespace projectVroomVroom.Pages
 
 
             ((RotateTransform)Car.RenderTransform).Angle = carRotationAngle;
-            CheckCollisionsWithCar();
+            
         }
 
         private void CheckCollisionsWithCar()
@@ -180,6 +181,22 @@ namespace projectVroomVroom.Pages
 
             }
 
+            var speed = trackRectanglePath.Children.OfType<Rectangle>().ToList();
+
+            foreach (Rectangle a in speed) { 
+            
+                Rect speedRect = new Rect(Canvas.GetLeft(a), Canvas.GetTop(a), a.Width, a.Height);
+                if (carRect.IntersectsWith(speedRect))
+                {
+                    carAcceleration = 0.5;
+                    maxVelocity = 3;
+                    break;
+                }
+                else {
+                    carAcceleration = 0.015;
+                    maxVelocity = 1;
+                }
+            }
         }
 
     }
