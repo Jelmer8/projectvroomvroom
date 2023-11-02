@@ -406,14 +406,14 @@ namespace projectVroomVroom.Pages
                 }
                 if (carRect2.IntersectsWith(speedRect))
                 {
-                    carAcceleration = 0.5;
-                    maxVelocity = 3;
+                    carAcceleration2 = 0.5;
+                    maxVelocity2 = 3;
                     break;
                 }
                 else
                 {
-                    carAcceleration = 0.015;
-                    maxVelocity = 1;
+                    carAcceleration2 = 0.015;
+                    maxVelocity2 = 1;
                 }
             }
 
