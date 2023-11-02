@@ -365,6 +365,7 @@
                     </Image.RenderTransform>
 
                 </Image>
+                <Label x:Name="labelTest"   FontSize="32" Content="Round 1" Canvas.Left="1483" Canvas.Top="10" Height="80" Width="136" Foreground="#FFFFB34F" />
             </Canvas>
             <Path x:Name="borderPath" Stroke="Red" StrokeThickness="45" 
           Data="{Binding Data, ElementName=trackPath}" />

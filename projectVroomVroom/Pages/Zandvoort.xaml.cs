@@ -315,8 +315,8 @@ namespace projectVroomVroom.Pages
                     break;
                 }
                 else {
-                    carAcceleration = 0.015;
-                    maxVelocity = 1;
+                    carAcceleration = 1.0;//0.015;
+                    maxVelocity = 50;
                 }
             }
 
@@ -337,6 +337,7 @@ namespace projectVroomVroom.Pages
                 if (carRect.IntersectsWith(finito)) {
                     if (checkpointDone == 1) {
                         rounds += 1;
+                        labelTest.Content = "Round " + rounds + 1;
                         checkpointDone = 0;
                         if (rounds >= 3)
                         {
