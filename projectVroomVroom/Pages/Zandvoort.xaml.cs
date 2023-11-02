@@ -26,8 +26,18 @@ namespace projectVroomVroom.Pages
         private bool isAccelerating = false;
         private bool isReversing = false;
         private double maxVelocity = 3.0;
+        double maxVelocity2 = 3.0;
         double carAcceleration = 0.03;
-
+        double carAcceleration2 = 0.03;
+        private bool isTurningLeft2 = false;
+        private bool isTurningRight2 = false;
+        private double carRotationAngle2 = 0;
+        private double carX2 = 100;
+        private double carY2 = 100;
+        private double carVelocityForward2 = 0;
+        private double carVelocityBackward2 = 0;
+        private bool isAccelerating2 = false;
+        private bool isReversing2 = false;
         private MediaPlayer mediaPlayer;
         private MainWindow mainWindow = (MainWindow)Application.Current.MainWindow;
         private Boolean VisibleCheck = false;
@@ -100,8 +110,24 @@ namespace projectVroomVroom.Pages
                 {
                     isReversing = true;
                 }
+            else if (e.Key == Key.A)
+            {
+                isTurningLeft2 = true;
+            }
+            else if (e.Key == Key.D)
+            {
+                isTurningRight2 = true;
+            }
+            else if (e.Key == Key.W)
+            {
+                isAccelerating2 = true;
+            }
+            else if (e.Key == Key.S)
+            {
+                isReversing2 = true;
+            }
 
-                if (!KeyIsDown)
+            if (!KeyIsDown)
                 {
                     KeyIsDown = true;
 
@@ -158,6 +184,22 @@ namespace projectVroomVroom.Pages
             {
                 isReversing = false;
             }
+            else if (e.Key == Key.A)
+            {
+                isTurningLeft2 = false;
+            }
+            else if (e.Key == Key.D)
+            {
+                isTurningRight2 = false;
+            }
+            else if (e.Key == Key.W)
+            {
+                isAccelerating2 = false;
+            }
+            else if (e.Key == Key.S)
+            {
+                isReversing2 = false;
+            }
         }
 
         private void MainMenuButton(object sender, RoutedEventArgs e)
@@ -187,8 +229,45 @@ namespace projectVroomVroom.Pages
                 carRotationAngle += 5;
             }
 
+            if (isTurningLeft2)
+            {
+                carRotationAngle2 -= 5;
+            }
+            if (isTurningRight2)
+            {
+                carRotationAngle2 += 5;
+            }
 
-            
+            if (isAccelerating2)
+            {
+                carVelocityForward2 += carAcceleration2;
+            }
+            else if (isReversing2)
+            {
+                carVelocityBackward2 += carAcceleration2;
+            }
+            else
+            {
+
+                carVelocityForward2 *= 0.95;
+                carVelocityBackward2 *= 0.95;
+
+            }
+
+            carVelocityForward2 = Math.Min(maxVelocity2, carVelocityForward2);
+            carVelocityBackward2 = Math.Min(maxVelocity2, carVelocityBackward2);
+
+            double totalVelocity2 = carVelocityForward2 - carVelocityBackward2;
+            double carRotationRadians2 = carRotationAngle2 * Math.PI / 180;
+
+            carX2 += totalVelocity2 * Math.Cos(carRotationRadians2);
+            carY2 += totalVelocity2 * Math.Sin(carRotationRadians2);
+
+            Canvas.SetLeft(Car2, carX2);
+            Canvas.SetTop(Car2, carY2);
+
+            ((RotateTransform)Car2.RenderTransform).Angle = carRotationAngle2;
+
             if (isAccelerating)
             {
                 carVelocityForward += carAcceleration;
@@ -286,8 +365,9 @@ namespace projectVroomVroom.Pages
         private void CheckCollisionsWithCar()
         {
             Image car = Car;
+            Image car2 = Car2;
             var collision = Collision.Children.OfType<Rectangle>().ToList();
-
+            Rect carRect2 = new Rect(Canvas.GetLeft(car2), Canvas.GetTop(car2), car2.Width, car2.Height);
             Rect carRect = new Rect(Canvas.GetLeft(car), Canvas.GetTop(car), car.Width, car.Height);
 
             foreach (Rectangle x in collision)
@@ -300,6 +380,12 @@ namespace projectVroomVroom.Pages
 
                     carVelocityForward = 0;
                     
+                }
+                if (carRect2.IntersectsWith(imgRect))
+                {
+
+                    carVelocityForward = 0;
+
                 }
             }
 
@@ -315,8 +401,19 @@ namespace projectVroomVroom.Pages
                     break;
                 }
                 else {
-                    carAcceleration = 1.0;//0.015;
-                    maxVelocity = 50;
+                    carAcceleration = 0.015;
+                    maxVelocity = 1;
+                }
+                if (carRect2.IntersectsWith(speedRect))
+                {
+                    carAcceleration = 0.5;
+                    maxVelocity = 3;
+                    break;
+                }
+                else
+                {
+                    carAcceleration = 0.015;
+                    maxVelocity = 1;
                 }
             }
 

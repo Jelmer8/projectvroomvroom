@@ -462,6 +462,12 @@
                         <RotateTransform Angle="0" />
                     </Image.RenderTransform>
                 </Image>
+
+                <Image x:Name="Car2"   KeyDown="OnKeyDown2" KeyUp="OnKeyUp" Focusable="True" Height="30"   Width="50" Source="/Images/gray_f1.png" Canvas.Left="100" Canvas.Top="182" RenderTransformOrigin="0.5,0.5"  HorizontalAlignment="Center" VerticalAlignment="Top"  >
+                    <Image.RenderTransform>
+                        <RotateTransform Angle="0" />
+                    </Image.RenderTransform>
+                </Image>
             </Canvas>
 
 
